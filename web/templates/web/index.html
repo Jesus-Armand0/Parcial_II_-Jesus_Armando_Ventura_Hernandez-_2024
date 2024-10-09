@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Innovaciones Tech es una empresa líder en soluciones tecnológicas, ofreciendo desde desarrollo de software hasta soporte técnico integral.">
+    <meta name="keywords" content="Tecnología, Desarrollo de Software, Soporte Técnico">
+    <meta name="author" content="Innovaciones Tech">
+    <title>Innovaciones Tech - Soluciones Tecnológicas</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Innovaciones Tech</h1>
+        <nav>
+            <ul>
+                <li><a href="#welcome">Inicio</a></li>
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="welcome">
+        <h2>Bienvenido a Innovaciones Tech</h2>
+        <p>Explora nuestras soluciones tecnológicas y descubre cómo podemos ayudarte a impulsar tu negocio hacia el futuro.</p>
+    </section>
+    
+    <section id="services">
+        <h2>Nuestros Servicios</h2>
+        <div class="grid">
+            <div>
+                <h3>Desarrollo de Software</h3>
+                <p>Desarrollamos soluciones de software personalizadas, desde aplicaciones móviles hasta sistemas empresariales completos.</p>
+            </div>
+            <div>
+                <h3>Soporte Técnico</h3>
+                <p>Ofrecemos soporte técnico integral para asegurar que tu infraestructura tecnológica funcione sin problemas.</p>
+            </div>
+            <div>
+                <h3>Consultoría Tecnológica</h3>
+                <p>Brindamos asesoramiento experto para optimizar tus operaciones y estrategias tecnológicas.</p>
+            </div>
+        </div>
+    </section>
+    
+    <footer id="contact">
+        <h2>Contáctanos</h2>
+        <p>¿Interesado en nuestros servicios? Envíanos un correo a contacto@innovacionestech.com o llámanos al +503 6303 0410.</p>
+    </footer>
+    <button onclick="mostrarMensaje()">Descubre Más</button>
+    <p id="mensaje" style="display:none;">¡Gracias por tu interés! Uno de nuestros representantes te contactará pronto.</p>
+
+    <script>
+    function mostrarMensaje() {
+        document.getElementById("mensaje").style.display = "block";
+    }
+    </script>
+
+</body>
+</html>
