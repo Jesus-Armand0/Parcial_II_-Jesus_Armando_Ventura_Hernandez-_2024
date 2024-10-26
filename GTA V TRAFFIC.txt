@@ -1,0 +1,2250 @@
+{$CLEO .csa}
+
+{0} nop 
+{2} wait 100
+
+:Noname_6
+{6} wait 0
+{10} get_time_of_day 3@ = current_time_hours, 4@
+{18} use_text_commands 0
+{22} if and
+{26}   3@ >= 0
+{33}   3@ < 2
+{40} goto_if_false @Noname_86
+{47} set_car_density_multiplier 9.9
+{54} set_ped_density_multiplier 9.9
+{61} if and
+{65}   is_player_playing $0[2]
+{70}   is_char_in_any_car $0[3]
+{75} goto_if_false @Noname_86
+{82} use_text_commands 1
+
+:Noname_86
+{86} get_time_of_day 3@ = current_time_hours, 4@
+{94} use_text_commands 0
+{98} if and
+{102}   3@ >= 2
+{109}   3@ < 4
+{116} goto_if_false @Noname_162
+{123} set_car_density_multiplier 9.9
+{130} set_ped_density_multiplier 9.9
+{137} if and
+{141}   is_player_playing $0[2]
+{146}   is_char_in_any_car $0[3]
+{151} goto_if_false @Noname_162
+{158} use_text_commands 1
+
+:Noname_162
+{162} get_time_of_day 3@ = current_time_hours, 4@
+{170} use_text_commands 0
+{174} if and
+{178}   3@ >= 4
+{185}   3@ < 6
+{192} goto_if_false @Noname_238
+{199} set_car_density_multiplier 9.9
+{206} set_ped_density_multiplier 9.9
+{213} if and
+{217}   is_player_playing $0[2]
+{222}   is_char_in_any_car $0[3]
+{227} goto_if_false @Noname_238
+{234} use_text_commands 1
+
+:Noname_238
+{238} get_time_of_day 3@ = current_time_hours, 4@
+{246} use_text_commands 0
+{250} if and
+{254}   3@ >= 6
+{261}   3@ < 12
+{268} goto_if_false @Noname_314
+{275} set_car_density_multiplier 9.9
+{282} set_ped_density_multiplier 9.9
+{289} if and
+{293}   is_player_playing $0[2]
+{298}   is_char_in_any_car $0[3]
+{303} goto_if_false @Noname_314
+{310} use_text_commands 1
+
+:Noname_314
+{314} get_time_of_day 3@ = current_time_hours, 4@
+{322} use_text_commands 0
+{326} if and
+{330}   3@ >= 12
+{337}   3@ < 18
+{344} goto_if_false @Noname_390
+{351} set_car_density_multiplier 9.9
+{358} set_ped_density_multiplier 9.9
+{365} if and
+{369}   is_player_playing $0[2]
+{374}   is_char_in_any_car $0[3]
+{379} goto_if_false @Noname_390
+{386} use_text_commands 1
+
+:Noname_390
+{390} get_time_of_day 3@ = current_time_hours, 4@
+{398} use_text_commands 0
+{402} if and
+{406}   3@ >= 18
+{413}   3@ < 21
+{420} goto_if_false @Noname_466
+{427} set_car_density_multiplier 9.9
+{434} set_ped_density_multiplier 9.9
+{441} if and
+{445}   is_player_playing $0[2]
+{450}   is_char_in_any_car $0[3]
+{455} goto_if_false @Noname_466
+{462} use_text_commands 1
+
+:Noname_466
+{466} get_time_of_day 3@ = current_time_hours, 4@
+{474} use_text_commands 0
+{478} if and
+{482}   3@ >= 21
+{489}   3@ < 23
+{496} goto_if_false @Noname_6
+{503} set_car_density_multiplier 9.9
+{510} set_ped_density_multiplier 9.9
+{517} if and
+{521}   is_player_playing $0[2]
+{526}   is_char_in_any_car $0[3]
+{531} goto_if_false @Noname_6
+{538} use_text_commands 1
+{542} goto @Noname_6
+hex
+{549}  45 00 56 41 52 00 F1 02 00 00 41 43 54 49 56 45
+{565}  5F 49 4E 54 45 52 49 4F 52 00
+end
+{575}   
+hex
+{578}  00 41 43 54 49 56 45 5F 49 4E 54 45 52 49 4F 52
+{594}  5F 4E 41 4D 45 00
+end
+{600} request_collision 
+hex
+{603}  00 41 43 54 4F 52 5F 43 41 54 41 4C 49 4E 41 00
+end
+{619} cset_lvar_float_to_lvar_int 
+hex
+{622}  00 41 43 54 4F 52 5F 43 45 53 41 52
+end
+{634}   not is_player_wearing 
+{637} nop 
+hex
+{639}  "ACTOR_OG_LOC" 00
+end
+{652} set_var_float_to_var_float 
+hex
+{655}  00 41 43 54 4F 52 5F 52 59 44 45 52
+end
+{667}   not get_offset_from_object_in_world_coords 
+{670} nop 
+hex
+{672}  "ACTOR_SMOKE" 00
+end
+{684} sub_timed_float_var_from_float_lvar 
+hex
+{687}  00 41 43 54 4F 52 5F 53 50 45 45 43 48 5F 47 58
+{703}  54 5F 52 45 46 45 52 45 4E 43 45 00 08 04 00 00
+{719}  41 43 54 45 00 08 04 00 00 41 43 54 4F 52 5F 53
+{726}  50 45 45 43 48 5F 57 41 56 5F 46 49 4C 45 00 0A
+end
+{742} 
+hex
+{745}  "ACTOR_SWEET" 00
+end
+{757} sub_timed_float_lvar_from_float_var 
+hex
+{760}  00 41 43 54 4F 52 5F 54 52 55 54 48 00 92 00 00
+{776}  00 41 49 52 50 4F 52 54 5F 4F 50 45 4E 5F 46 4C
+{792}  41 47 00 B3
+end
+{796} 
+hex
+{799}  "ALL_CARS_COLLECTED_FLAG" 00 A0 04 00 00 41 4C 4C 5F 43 41 54 41 4C 49 4E 41
+{839}  5F 4D 49 53 53 49 4F 4E 53 5F 50 41 53 53 45 44
+{855}  00 CD
+end
+{857} goto 
+hex
+{860}  "ALL_HORSESHOES_COLLECTED" 00
+end
+{885} pause_playback_recorded_car 
+hex
+{888}  00 41 4C 4C 5F 4F 55 53 54 45 52 53 5F 43 4F 4C
+{904}  4C 45 43 54 45 44 00 EC
+end
+{912} 
+hex
+{915}  "ALL_PHOTOS_TAKEN" 00
+end
+{932} unpause_playback_recorded_car 
+hex
+{935}  00 41 4C 4C 5F 52 41 43 45 53 5F 57 4F 4E 5F 50
+{951}  52 49 5A 45 5F 46 4C 41 47 00 1B 09 00 00 41 4C
+{967}  4C 5F 54 41 47 53 5F 53 50 52 41 59 45 44 00 EF
+end
+{983} 
+hex
+{986}  "AMMU_AVAILABLE_WEAPONS" 00 46 25 00 00 41 4D 4D 55 5F 49 43 4F 4E 53 5F 53
+{1025}  48 4F 57 4E 00 43 00 00 00 41 4D 4D 55 5F 49 4E
+{1041}  54 45 52 49 4F 52 5F 4E 41 4D 45 00 4B 25 00 00
+{1057}  41 4D 4D 55 5F 50 4C 41 59 45 52 5F 41 4E 47 4C
+{1073}  45 00 6F 25 00 00 41 4D 4D 55 5F 53 45 4C 45 43
+{1089}  54 45 44 5F 57 45 41 50 4F 4E 00 50
+end
+{1101}   is_float_lvar_greater_than_float_lvar 
+hex
+{1104}  "AMMU_SELECTED_WEAPON_MODEL" 00 51 25 00 00 41 4D 4D 55 5F 53 45 4C 45 43 54 45
+{1147}  44 5F 57 45 41 50 4F 4E 5F 57 45 41 50 4F 4E 5F
+{1163}  47 52 4F 55 50 00 4F 25 00 00 41 4D 4D 55 5F 53
+{1179}  45 4C 4C 45 52 00 44 25 00 00 41 4D 4D 55 5F 53
+{1195}  45 4C 4C 45 52 5F 41 4E 47 4C 45 00 6E 25 00 00
+{1211}  41 4D 4D 55 5F 53 45 4C 4C 45 52 5F 41 4E 49 4D
+{1227}  41 54 49 4F 4E 00 5A 25 00 00 41 4D 4D 55 5F 53
+{1243}  45 4C 4C 45 52 5F 41 4E 49 4D 41 54 49 4F 4E 5F
+{1259}  54 49 4D 45 00 6D
+end
+{1265}   is_float_lvar_greater_than_float_lvar 
+hex
+{1268}  "AMMU_STAGE" 00 6B 25 00 00 41 4D 4D 55 5F 57 45 41 50 4F 4E 5F
+{1295}  43 4F 53 54 00 45
+end
+{1301}   is_float_lvar_greater_than_float_lvar 
+hex
+{1304}  "AMMU_WEAPON_NAME" 00 49 25 00 00 41 4D 4D 55 5F 58 5F 41 49 4D 5F 43
+{1337}  41 4D 45 52 41 00 77 25 00 00 41 4D 4D 55 5F 58
+{1353}  5F 4F 46 46 53 45 54 00 74 25 00 00 41 4D 4D 55
+{1369}  5F 58 5F 53 45 4C 4C 45 52 00 B1 02 00 00 41 4D
+{1385}  4D 55 5F 59 5F 41 49 4D 5F 43 41 4D 45 52 41 00
+{1401}  78 25 00 00 41 4D 4D 55 5F 59 5F 4F 46 46 53 45
+{1417}  54 00 75 25 00 00 41 4D 4D 55 5F 59 5F 53 45 4C
+{1433}  4C 45 52 00 B2 02 00 00 41 4D 4D 55 5F 5A 5F 41
+{1449}  49 4D 5F 43 41 4D 45 52 41 00 79 25 00 00 41 4D
+{1465}  4D 55 5F 5A 5F 4F 46 46 53 45 54 00 76 25 00 00
+{1481}  41 4D 4D 55 5F 5A 5F 53 45 4C 4C 45 52 00 B3 02
+{1497}  00 00 41 55 44 49 4F 5F 4C 49 4E 45 5F 49 53 5F
+{1513}  41 43 54 49 56 45 00 07
+end
+{1521} 
+hex
+{1524}  "BCESAR2_PASSED_ONCE" 00 96 08 00 00 42 43 45 53 41 52 32 5F 53 43 52 49
+{1560}  50 54 5F 4C 41 55 4E 43 48 45 44 00
+end
+{1572}   is_char_in_area_on_foot_2d 
+hex
+{1575}  00 42 43 45 53 41 52 32 5F 54 49 4D 45 53 5F 50
+{1591}  41 53 53 45 44 00
+end
+{1597} attach_trailer_to_cab 
+hex
+{1600}  00 42 43 45 53 41 52 33 5F 53 43 52 49 50 54 5F
+{1616}  4C 41 55 4E 43 48 45 44 00 A2
+end
+{1626} wait 
+hex
+{1629}  "BCE_CHECKPOINTS_INDEX" 00 CB 20 00 00 42 45 45 46 59 42 41 52 4F 4E 5F 53
+{1667}  43 4F 52 45 00 4A
+end
+{1673}   
+hex
+{1676}  "BEEFYBARON_TIME" 00 49 19 00 00 42 4A 41 43 4B 5F 42 45 54 31 00 E8
+end
+{1708}   
+hex
+{1711}  "BJACK_BET2" 00 E9 23 00 00 42 4A 41 43 4B 5F 42 45 54 5F 53 54
+{1738}  45 50 00 EA
+end
+{1742}   
+hex
+{1745}  "BJACK_BORDER_WIDTH" 00 B2 23 00 00 42 4A 41 43 4B 5F 43 41 52 44 5F 48
+{1780}  45 49 47 48 54 00 B0 23 00 00 42 4A 41 43 4B 5F
+{1796}  43 41 52 44 5F 49 44 00 B4 23 00 00 42 4A 41 43
+{1812}  4B 5F 43 41 52 44 5F 57 49 44 54 48 00 AF
+end
+{1826}   
+hex
+{1829}  "BJACK_CHEAT_CARD_ID" 00 0C 24 00 00 42 4A 41 43 4B 5F 44 45 41 4C 45 52
+{1865}  5F 47 4F 54 5F 41 43 45 00 E1
+end
+{1875}   
+hex
+{1878}  "BJACK_DEALER_HAS_STUCK" 00 D5 23 00 00 42 4A 41 43 4B 5F 44 45 41 4C 45 52
+{1917}  5F 54 4F 54 41 4C 00 DF
+end
+{1925}   
+hex
+{1928}  "BJACK_DEALER_TOTAL2" 00 E0 23 00 00 42 4A 41 43 4B 5F 44 45 41 4C 45 52
+{1964}  5F 57 49 4E 53 5F 42 59 5F 44 45 46 41 55 4C 54
+{1980}  00 DA
+end
+{1982}   
+hex
+{1985}  "BJACK_FLAG_CARD_CHEAT" 00 5E 24 00 00 42 4A 41 43 4B 5F 48 41 4C 46 5F 42
+{2023}  45 54 00 EC
+end
+{2027}   
+hex
+{2030}  "BJACK_INITIAL_STAKE" 00 EE 23 00 00 42 4A 41 43 4B 5F 4C 41 53 54 5F 42
+{2066}  45 54 00 E7
+end
+{2070}   
+hex
+{2073}  "BJACK_PAYOUT" 00 EF 23 00 00 42 4A 41 43 4B 5F 50 4C 41 59 45 52
+{2102}  5F 43 41 4E 4E 4F 54 5F 44 4F 55 42 4C 45 00 CF
+end
+{2118}   
+hex
+{2121}  "BJACK_PLAYER_CANNOT_SPLIT" 00 CD 23 00 00 42 4A 41 43 4B 5F 50 4C 41 59 45 52
+{2163}  5F 43 41 53 48 00 E6 23 00 00 42 4A 41 43 4B 5F
+{2179}  50 4C 41 59 45 52 5F 47 4F 54 5F 41 43 45 31 00
+{2195}  E2 23 00 00 42 4A 41 43 4B 5F 50 4C 41 59 45 52
+{2211}  5F 47 4F 54 5F 41 43 45 32 00 E3 23 00 00 42 4A
+{2227}  41 43 4B 5F 50 4C 41 59 45 52 5F 47 4F 54 5F 42
+{2243}  4A 41 43 4B 00 E4
+end
+{2249}   
+hex
+{2252}  "BJACK_PLAYER_HAS_DOUBLED1" 00 D0 23 00 00 42 4A 41 43 4B 5F 50 4C 41 59 45 52
+{2294}  5F 48 41 53 5F 44 4F 55 42 4C 45 44 32 00 D1 23
+{2310}  00 00 42 4A 41 43 4B 5F 50 4C 41 59 45 52 5F 48
+{2326}  41 53 5F 48 49 54 31 00 D4 23 00 00 42 4A 41 43
+{2342}  4B 5F 50 4C 41 59 45 52 5F 48 41 53 5F 49 4E 50
+{2358}  55 54 00 D9
+end
+{2362}   
+hex
+{2365}  "BJACK_PLAYER_HAS_QUIT" 00 D6 23 00 00 42 4A 41 43 4B 5F 50 4C 41 59 45 52
+{2403}  5F 48 41 53 5F 53 50 4C 49 54 00 CE
+end
+{2415}   
+hex
+{2418}  "BJACK_PLAYER_HAS_STUCKED1" 00 D2 23 00 00 42 4A 41 43 4B 5F 50 4C 41 59 45 52
+{2460}  5F 48 41 53 5F 53 54 55 43 4B 45 44 32 00 D3 23
+{2476}  00 00 42 4A 41 43 4B 5F 50 4C 41 59 45 52 5F 48
+{2492}  41 53 5F 57 4F 4E 31 00 D7 23 00 00 42 4A 41 43
+{2508}  4B 5F 50 4C 41 59 45 52 5F 48 41 53 5F 57 4F 4E
+{2524}  32 00 D8 23 00 00 42 4A 41 43 4B 5F 50 4C 41 59
+{2540}  45 52 5F 54 4F 54 41 4C 31 00 DB 23 00 00 42 4A
+{2556}  41 43 4B 5F 50 4C 41 59 45 52 5F 54 4F 54 41 4C
+{2572}  31 5F 42 00 DC 23 00 00 42 4A 41 43 4B 5F 50 4C
+{2588}  41 59 45 52 5F 54 4F 54 41 4C 32 00 DD 23 00 00
+{2604}  42 4A 41 43 4B 5F 50 4C 41 59 45 52 5F 54 4F 54
+{2620}  41 4C 32 5F 42 00 DE 23 00 00 42 4A 41 43 4B 5F
+{2636}  52 45 46 55 4E 44 00 ED
+end
+{2644}   
+hex
+{2647}  "BJACK_X_CHIP_OFFSET" 00 43 24 00 00 42 4A 41 43 4B 5F 58 5F 50 4C 41 59
+{2683}  45 52 5F 53 50 52 49 54 45 00 6F 23 00 00 42 4A
+{2699}  41 43 4B 5F 58 5F 53 43 52 45 45 4E 50 4F 53 00
+{2715}  0D 24 00 00 42 4A 41 53 00 0D 24 00 00 42 4A 41
+{2722}  43 4B 5F 59 5F 43 48 49 50 5F 4F 46 46 53 45 54
+{2738}  00 4B
+end
+{2740}   is_float_var_greater_than_float_var 
+hex
+{2743}  "BJACK_Y_PLAYER_SPRITE" 00 77 23 00 00 42 4A 41 43 4B 5F 59 5F 53 43 52 45
+{2781}  45 4E 50 4F 53 00 28 24 00 00 42 4A 41 43 4B 5F
+{2797}  5A 5F 43 48 49 50 5F 4F 46 46 53 45 54 00 53 24
+{2813}  00 00 42 55 47 52 4C 41 52 59 5F 43 41 53 48 00
+{2829}  24 20 00 00 42 55 52 47 4C 41 52 59 5F 44 41 59
+{2845}  4C 49 47 48 54 00 2B 20 00 00 42 55 52 47 4C 41
+{2861}  52 59 5F 44 45 54 45 43 54 45 44 5F 46 4C 41 47
+{2877}  00 01 07 00 00 42 55 52 47 00 01 07 00 00 42 55
+{2884}  52 47 4C 41 52 59 5F 45 53 43 41 50 45 5F 54 49
+{2900}  4D 45 5F 53 45 43 00 2C
+end
+{2908}   
+hex
+{2911}  "BURGLARY_GARAGES" 00 25 20 00 00 42 55 52 47 4C 41 52 59 5F 4E 4F 49
+{2944}  53 45 5F 46 00 00
+end
+{2950} 
+hex
+{2953}  "BURGLARY_NOISE_I" 00 AD 14 00 00 42 55 52 47 4C 41 52 59 5F 54 49 4D
+{2986}  45 5F 4C 45 46 54 00 2D
+end
+{2994}   
+hex
+{2997}  "BUY_ASSET_PICKUPS" 00 95 06 00 00 42 55 59 5F 49 4E 44 45 58 00 D7 02
+{3031}  00 00 43 41 4C 4C 5F 41 4E 53 57 45 52 45 44 00
+{3047}  86 05 00 00 43 41 4C 4C 5F 54 49 4D 45 5F 53 54
+{3063}  4F 52 45 44 5F 46 4C 41 47 00 85 05 00 00 43 41
+{3079}  52 4D 4F 44 5F 43 41 52 00 BF
+end
+{3089}   
+hex
+{3092}  "CARMOD_DISABLED_FLAG" 00
+end
+{3113} get_user_of_closest_map_attractor 
+hex
+{3116}  00 43 41 52 4D 4F 44 5F 4D 45 4E 55 5F 43 4F 4C
+{3132}  4F 52 53 00 BA 28 00 00 43 41 52 5F 4D 4F 44 45
+{3148}  4C 53 5F 54 4F 5F 45 58 50 4F 52 54 00 1A
+end
+{3162} 
+hex
+{3165}  "CASINO_TOTAL_PASSED_MISSIONS" 00 55 02 00 00 43 41 54 31 5F 50 49 43 4B 55 50 53
+{3210}  5F 43 4F 4C 4C 45 43 54 45 44 00 4B
+end
+{3222}   
+hex
+{3225}  "CATALINA_DIALOG_BETTING_SHOP_PLAYED" 00
+end
+{3261} switch_ped_roads_back_to_original 
+hex
+{3264}  00 43 41 54 41 4C 49 4E 41 5F 44 49 41 4C 4F 47
+{3280}  5F 4C 49 51 55 4F 52 5F 53 54 4F 52 45 5F 50 4C
+{3296}  41 59 45 44 00 1D
+end
+{3302} 
+hex
+{3305}  "CATALINA_SELECTED_MISSION" 00
+end
+{3331} get_ground_z_for_3d_coord 
+hex
+{3334}  00 43 41 54 41 4C 49 4E 41 5F 54 4F 54 41 4C 5F
+{3350}  50 41 53 53 45 44 5F 4D 49 53 53 49 4F 4E 53 00
+{3366}  40 00 00 00 43 45 4C 4C 50 48 4F 4E 45 5F 43 41
+{3382}  4C 4C 5F 49 44 00 84 05 00 00 43 45 53 41 52 5F
+{3398}  54 4F 54 41 4C 5F 50 41 53 53 45 44 5F 4D 49 53
+{3414}  53 49 4F 4E 53 00
+end
+{3420} set_car_heavy 
+hex
+{3423}  00 43 4F 4C 4C 45 43 54 45 44 5F 48 4F 52 53 48
+{3439}  4F 45 53 00 1F 03 00 00 43 4F 4C 4C 45 43 54 45
+{3455}  44 5F 4F 59 53 54 45 52 53 00
+end
+{3465}   has_car_been_damaged_by_weapon 
+hex
+{3468}  00 43 4F 4C 4F 52 5F 47 52 45 45 4E 00 46
+end
+{3482} 
+hex
+{3485}  "COLOR_RED" 00 45 0D 00 00 43 4F 50 5F 55 4E 49 46 4F 52 4D 5F
+{3511}  41 56 41 49 4C 41 42 4C 45 00
+end
+{3521} reset_vehicle_hydraulics 
+hex
+{3524}  00 43 50 52 41 43 45 5F 44 45 42 55 47 5F 43 48
+{3540}  45 43 4B 50 4F 49 4E 54 5F 49 4E 44 45 58 00 2F
+end
+{3556}   
+hex
+{3559}  "CRANE_MAGNET" 00 A9 0A 00 00 43 52 41 4E 45 5F 52 4F 50 45 5F 4C
+{3588}  45 4E 47 54 48 00 00 29 00 00 43 52 41 53 48 5F
+{3604}  4C 53 5F 54 4F 54 41 4C 5F 50 41 53 53 45 44 5F
+{3620}  4D 49 53 53 49 4F 4E 53 00 C8
+end
+{3630} wait 
+hex
+{3633}  "CRASH_SF_TOTAL_PASSED_MISSIONS" 00 22 02 00 00 43 52 4F 55 50 49 45 52 5F 55 4E 49
+{3680}  46 4F 52 4D 5F 41 56 41 49 4C 41 42 4C 45 00 FD
+end
+{3696} 
+hex
+{3699}  "CURRENT_FLIGHT_RECORD" 00
+end
+{3721}   is_wanted_level_greater 
+hex
+{3724}  00 43 55 52 52 45 4E 54 5F 4C 41 4E 47 55 41 47
+{3740}  45 00
+end
+{3742} create_char 
+hex
+{3745}  00 43 55 52 52 45 4E 54 5F 4D 4F 4E 54 48 00 E2
+end
+{3761} 
+hex
+{3764}  "CURRENT_MONTH_DAY" 00 E1 14 00 00 43 55 52 52 45 4E 54 5F 53 48 4F 50
+{3798}  5F 47 58 54 5F 4E 41 4D 45 00
+end
+{3808} car_goto_coordinates_accurate 
+hex
+{3811}  00 43 55 52 52 45 4E 54 5F 54 49 4D 45 5F 49 4E
+{3827}  5F 4D 53 00 B8 00 00 00 43 55 52 52 45 4E 54 5F
+{3843}  54 49 4D 45 5F 49 4E 5F 4D 53
+end
+{3853} 0032:   v$0[0] >=  // Note: the incorrect math opcode was used here
+hex
+{3859}  "CURRENT_TOURNAMENT" 00 A1 08 00 00 43 55 52 52 45 4E 54 5F 54 4F 57 4E
+{3894}  5F 4E 55 4D 42 45 52 00
+end
+{3902} add_group_decision_maker_event_response 
+hex
+{3905}  00 43 55 52 52 45 4E 54 5F 57 41 4E 54 45 44 5F
+{3921}  4C 49 53 54 00 19
+end
+{3927} 0004:  // Note: the incorrect math opcode was used here
+hex
+{3930}  "CUSTOM_TOURNAMENT_FLAG" 00
+end
+{3953} add_timed_val_to_float_lvar 
+hex
+{3956}  00 44 41 4E 43 45 5F 41 4E 49 4D 00 B3 14 00 00
+{3972}  44 41 4E 43 45 5F 41 4E 49 4D 5F 49 46 50 00 BB
+end
+{3988} 0014:  // Note: the incorrect math opcode was used here
+hex
+{3991}  "DANCE_SCORE" 00 B0 14 00 00 44 45 46 41 55 4C 54 5F 57 41 49 54
+{4019}  5F 54 49 4D
+end
+{4023}   is_float_lvar_equal_to_float_lvar "" == 
+hex
+{4028}  00 44 49 41 4C 4F 47 5F 41 52 52 41 59 5F 53 49
+{4044}  5A 45 00 8E
+end
+{4048} 0005:  // Note: the incorrect math opcode was used here
+hex
+{4051}  "DIALOG_INDEX" 00 8D 05 00 00 44 49 41 4C 4F 47 5F 53 55 42 54 49
+{4080}  54 4C 45 53 00 A5
+end
+{4086} 0005:  // Note: the incorrect math opcode was used here
+hex
+{4089}  "DIALOG_WAV" 00 90 05 00 00 44 49 41 4C 4F 47 5F 57 41 56 5F 49
+{4116}  44 00 8F 05 00 00 44 49 53 54 41 4E 43 45 5F 42
+{4132}  45 54 57 45 45 4E 5F 50 4F 49 4E 54 53 00
+end
+{4146}   is_float_var_equal_to_float_var 
+hex
+{4149}  00 45 58 50 4F 52 54 5F 43 41 52 53 5F 53 54 41
+{4165}  54 55 53 00 24 04 00 00 45 58 50 4F 52 54 5F 50
+{4181}  52 49 43 45 5F 48 45 41 4C 54 48 5F 4D 55 4C 54
+{4197}  49 50 4C 49 45 52 00 A4
+end
+{4205} 0004:  // Note: the incorrect math opcode was used here
+hex
+{4208}  "EXPORT_PRICE_MULTIPLIER" 00
+end
+{4232}   is_int_var_equal_to_constant 
+hex
+{4235}  00 46 4C 41 47 5F 41 4D 4D 55 5F 53 45 4C 4C 45
+{4251}  52 5F 41 54 54 41 43 4B 5F 50 4C 41 59 45 52 00
+{4267}  6C 25 00 00 46 4C 41 47 5F 50 4C 41 59 45 52 5F
+{4283}  41 54 54 41 43 4B 5F 46 4F 4F 44 5F 53 45 4C 4C
+{4299}  45 52 00 BC
+end
+{4303} 000A:  // Note: the incorrect math opcode was used here
+hex
+{4306}  "FLAG_PLAYER_IN_CRANE" 00
+end
+{4327} request_ipl 
+hex
+{4330}  00 46 4C 49 47 48 54 5F 53 43 48 4F 4F 4C 5F 42
+{4346}  52 49 45 46 5F 50 4C 41 59 45 44 00 A2 07 00 00
+{4362}  46 4C 49 47 48 54 5F 53 43 48 4F 4F 4C 5F 43 4F
+{4378}  4E 54 45 53 54 53 5F 50 41 53 53 45 44 00
+end
+{4392} perform_sequence_task_from_progress 
+hex
+{4395}  00 46 4C 49 47 48 54 5F 53 43 48 4F 4F 4C 5F 43
+{4411}  55 52 52 45 4E 54 5F 43 4F 4E 54 45 53 54 00 A1
+end
+{4427} 0007:  // Note: the incorrect math opcode was used here
+hex
+{4430}  "FLIGHT_SCHOOL_INTRO_FLAG" 00
+end
+{4455} 002A:    // Note: the incorrect math opcode was used here
+hex
+{4458}  00 46 4C 49 47 48 54 5F 53 43 48 4F 4F 4C 5F 52
+{4474}  45 43 4F 52 44 53 00 96
+end
+{4482} 0007:  // Note: the incorrect math opcode was used here
+hex
+{4485}  "FOOD_PLAYER_AGGRESSIVE_FLAG" 00 A5 02 00 00 46 4F 4F 44 5F 53 45 4C 4C 45 52 00
+{4529}  30 27 00 00 46 4F 4F 44 5F 53 45 4C 4C 45 52 5F
+{4545}  45 58 49 53 54 53 00 31
+end
+{4553}   is_float_lvar_greater_than_float_var 
+hex
+{4556}  "FREEFALL_STAGE" 00
+end
+{4571} start_recording_car 
+hex
+{4574}  00 47 41 4D 42 4C 45 53 5F 43 41 53 48 57 49 4E
+{4590}  00 47
+end
+{4592} 000D:  // Note: the incorrect math opcode was used here
+hex
+{4595}  "GARAGE_BODLAWN_ICON" 00 98 01 00 00 47 41 52 41 47 45 5F 4D 4F 44 4C 41
+{4631}  53 54 5F 49 43 4F 4E 00 9E 01 00 00 47 41 52 41
+{4647}  47 45 5F 54 4F 54 41 4C 5F 50 41 53 53 45 44 5F
+{4663}  4D 49 53 53 49 4F 4E 53 00 1D
+end
+{4673} goto 
+hex
+{4676}  "GFSEX_EXCITEMENT" 00 C1 04 00 00 47 46 53 45 58 5F 50 4F 57 45 52 00
+{4709}  C2 04 00 00 47 46 5F 41 4E 49 4D 5F 54 49 4D 45
+{4725}  00 C4
+end
+{4727} 0004:  // Note: the incorrect math opcode was used here
+hex
+{4730}  "GF_CENSORE_FLAG" 00 C3 04 00 00 47 46 5F 57 41 49 54 5F 54 49 4D 45
+{4762}  00 BC
+end
+{4764} 0004:  // Note: the incorrect math opcode was used here
+hex
+{4767}  "GIMP_SUIT_AVAILABLE" 00
+end
+{4787} get_current_language 
+hex
+{4790}  00 47 49 52 4C 44 4F 4F 52 53 00 DA
+end
+{4802} 0004:  // Note: the incorrect math opcode was used here
+hex
+{4805}  "GIRLFRIEND" 00
+end
+{4816}   is_car_health_greater 
+hex
+{4819}  00 47 49 52 4C 4D 41 52 4B 45 52 00
+end
+{4831} remove_sound 
+hex
+{4834}  00 47 49 52 4C 52 45 53 50 45 43 54 00 B4
+end
+{4848} 0004:  // Note: the incorrect math opcode was used here
+hex
+{4851}  "GIRLS_GIFTS_BITMASK" 00 96 01 00 00 47 49 52 4C 5F 44 41 54 45 44 5F 4E
+{4887}  4F 57
+end
+{4889}   not clear_object_last_weapon_damage 1229389824
+hex
+{4896}  "RL_DESIRED_PROGRESS_TO_INVITE" 00
+end
+{4926} add_blip_for_car_old 
+hex
+{4929}  00 47 49 52 4C 5F 44 45 53 49 52 45 44 5F 53 45
+{4945}  58 41 50 50 45 41 4C 00
+end
+{4953} add_police_restart 
+hex
+{4956}  00 47 49 52 4C 5F 50 52 4F 47 52 45 53 53 00 67
+end
+{4972} wait 
+hex
+{4975}  "GROVE_TOTAL_PASSED_MISSIONS" 00 73 02 00 00 47 53 5F 47 41 4E 47 5F 43 41 53 48
+{5019}  00 C8
+end
+{5021} goto 
+hex
+{5024}  "GS_GANG_MONEY_PICKUP" 00 C6 02 00 00 47 53 5F 47 41 4E 47 5F 54 55 52 46
+{5061}  5F 43 4F 4E 54 52 4F 4C 4C 45 44 00 C7 02 00 00
+{5077}  47 53 5F 4D 4F 4E 45 59 5F 50 49 43 4B 55 50 5F
+{5093}  45 58 49 53 54 53 00 30
+end
+{5101} shake_cam 
+hex
+{5104}  "GYMFIGHT_INTERIOR" 00
+end
+{5122}   is_script_fire_extinguished 
+hex
+{5125}  00 47 59 4D 53 5F 41 43 43 45 53 53 49 42 4C 45
+{5141}  5F 46 4C 41 47 00 70 09 00 00 47 59 4D 5F 42 45
+{5157}  4E 43 48 5F 57 45 49 47 48 54 00 23
+end
+{5169} 0022:    // Note: the incorrect math opcode was used here
+hex
+{5172}  "GYM_DAY_LIMIT" 00 E5 14 00 00 47 59 4D 5F 44 55 4D 42 42 45 4C 4C
+{5202}  53 5F 50 41 4E 45 4C 00 37 22 00 00 47 59 4D 5F
+{5218}  44 55 4D 42 42 45 4C 4C 53 5F 50 41 4E 45 4C 5F
+{5234}  53 45 4C 45 43 54 45 44 5F 49 4E 44 45 58 00 3C
+end
+{5250} 0022:    // Note: the incorrect math opcode was used here
+hex
+{5253}  "GYM_DUMBBELLS_WEIGHT" 00 43 22 00 00 47 59 4D 5F 47 59 4D 42 49 4B 45 5F
+{5290}  44 49 53 54 41 4E 43 45 00 0F
+end
+{5300} 0022:    // Note: the incorrect math opcode was used here
+hex
+{5303}  "GYM_GYMBIKE_LEVEL" 00 0E 22 00 00 47 59 4D 5F 47 59 4D 42 49 4B 45 5F
+{5337}  50 4F 57 45 52 00 0D 22 00 00 47 59 4D 52 00 0D
+{5344}  22 00 00 47 59 4D 5F 4D 4F 4E 54 48 5F 44 41 59
+{5360}  5F 57 48 45 4E 5F 4C 49 4D 49 54 5F 52 45 41 43
+{5376}  48 45 44 00 E3 14 00 00 47 59 4D 5F 4D 4F 4E 54
+{5392}  48 5F 57 48 45 4E 5F 4C 49 4D 49 54 5F 52 45 41
+{5408}  43 48 45 44 00 E4
+end
+{5414} 0014:  // Note: the incorrect math opcode was used here
+hex
+{5417}  "GYM_STAT_BENCH_HEAVIEST_WEIGHT" 00 24 22 00 00 47 59 4D 5F 53 54 41 54 5F 44 55 4D
+{5464}  42 42 45 4C 4C 53 5F 48 45 41 56 49 45 53 54 5F
+{5480}  57 45 49 47 48 54 00 42
+end
+{5488} 0022:    // Note: the incorrect math opcode was used here
+hex
+{5491}  "GYM_STAT_FAT" 00 97 01 00 00 48 45 49 53 54 5F 54 4F 54 41 4C 5F
+{5520}  50 41 53 53 45 44 5F 4D 49 53 53 49 4F 4E 53 00
+{5536}  58 02 00 00 48 45 4C 50 5F 42 49 43 59 43 4C 45
+{5552}  5F 31 5F 53 48 4F 57 4E 00 15 00 00 00 48 45 4C
+{5568}  50 5F 42 49 43 59 43 4C 45 5F 32 5F 53 48 4F 57
+{5584}  4E 00
+end
+{5586} line 
+hex
+{5589}  00 48 45 4C 50 5F 42 4D 58 5F 43 59 43 4C 49 4E
+{5605}  47 5F 53 48 4F 57 4E 00
+end
+{5613} boat_stop 
+hex
+{5616}  00 48 45 4C 50 5F 42 55 53 54 45 44 5F 53 48 4F
+{5632}  57 4E 00 7E 00 00 00 48 45 4C 50 5F 43 41 4D 45
+{5648}  52 41 5F 41 4E 44 5F 52 41 44 49 4F 5F 53 48 4F
+{5664}  57 4E 00 55 00 00 00 48 45 4C 50 5F 43 48 41 54
+{5680}  5F 53 48 4F 57 4E 00 7D 00 00 00 48 45 4C 50 5F
+{5696}  43 48 49 4C 49 41 44 5F 43 59 43 4C 49 4E 47 5F
+{5712}  53 48 4F 57 4E 00
+end
+{5718} build_player_model 
+hex
+{5721}  00 48 45 4C 50 5F 43 52 4F 55 50 49 45 52 5F 55
+{5737}  4E 49 46 4F 52 4D 5F 53 48 4F 57 4E 00 C7 00 00
+{5753}  00 48 45 4C 50 5F 44 45 4E 49 53 45 5F 53 48 4F
+{5769}  57 4E 00 33 00 00 00 48 45 4C 50 5F 44 52 49 56
+{5785}  45 42 59 5F 53 48 4F 57 4E 00
+end
+{5795} create_player 
+hex
+{5798}  00 48 45 4C 50 5F 46 49 52 45 54 52 55 43 4B 5F
+{5814}  53 48 4F 57 4E 00
+end
+{5820} abs_var_float 
+hex
+{5823}  00 48 45 4C 50 5F 46 4F 4C 4C 4F 57 5F 49 43 4F
+{5839}  4E 5F 53 48 4F 57 4E 00 54 00 00 00 48 45 4C 50
+{5855}  5F 47 49 4D 50 5F 53 55 49 54 5F 53 48 4F 57 4E
+{5871}  00 77
+end
+{5873} goto 
+hex
+{5876}  "HELP_GROOVE_SHOWN" 00 41 00 00 00 48 45 4C 50 5F 49 4D 50 4F 52 54 5F
+{5910}  53 48 4F 57 4E 00 9F 04 00 00 48 45 4C 50 5F 49
+{5926}  4E 54 52 4F 5F 53 48 4F 57 4E 00 36 00 00 00 48
+{5942}  45 4C 50 5F 52 45 53 50 45 43 54 5F 53 48 4F 57
+{5958}  4E 00 9D 08 00 00 48 45 4C 50 5F 53 46 5F 50 48
+{5974}  4F 54 4F 53 5F 53 48 4F 57 4E 00 6A 00 00 00 48
+{5990}  45 4C 50 5F 53 4B 49 50 43 41 4C 4C 5F 53 48 4F
+{6006}  57 4E 00 8A
+end
+{6010} 0005:  // Note: the incorrect math opcode was used here
+hex
+{6013}  "HELP_SPRAYCAN_SHOWN" 00 9A 01 00 00 48 45 4C 50 5F 53 54 45 41 4C 54 48
+{6049}  5F 53 48 4F 57 4E 00 34 00 00 00 48 45 4C 50 5F
+{6065}  53 57 49 4D 5F 53 48 4F 57 4E 00 F8 00 00 00 48
+{6081}  45 4C 50 5F 54 4F 47 47 4C 45 5F 4F 44 44 4A 4F
+{6097}  42 5F 53 48 4F 57 4E 00 B5 00 00 00 48 45 4C 50
+{6113}  5F 54 52 49 5F 43 59 43 4C 49 4E 47 5F 53 48 4F
+{6129}  57 4E 00 D2
+end
+{6133} goto 
+hex
+{6136}  "HELP_TRI_NOCOCK_SHOWN" 00 D5 02 00 00 48 45 4C 50 5F 54 52 49 5F 53 54 41
+{6174}  4D 49 4E 41 5F 53 48 4F 57 4E 00 D3
+end
+{6186} goto 
+hex
+{6189}  "HELP_TRUCKER_MISSIONS_SHOWN" 00 3E 00 00 00 48 45 4C 50 5F 56 41 4C 45 54 5F 53
+{6233}  48 4F 57 4E 00 32 00 00 00 48 45 4C 50 5F 57 41
+{6249}  53 54 45 44 5F 53 48 4F 57 4E 00 77 00 00 00 48
+{6265}  49 47 48 5F 43 41 52 44 53 5F 4E 55 4D 42 45 52
+{6281}  00 A4
+end
+{6283} 0022:    // Note: the incorrect math opcode was used here
+hex
+{6286}  "HJ_BEGIN_STUNT_FLAG" 00 0B 05 00 00 48 4A 5F 42 4F 4E 55 53
+end
+{6318} clear_object_last_weapon_damage 0
+hex
+{6323}  "HJ_CAR_ANGLE" 00 23 05 00 00 48 4A 5F 43 41 52 5F 41 4E 47 4C 45
+{6352}  5F 42 45 47 49 4E 5F 53 54 55 4E 54 00 22
+end
+{6366} 0005:  // Note: the incorrect math opcode was used here
+hex
+{6369}  "HJ_CAR_X" 00
+end
+{6378} freeze_car_position 
+hex
+{6381}  00 48 4A 5F 43 41 52 5F 58 5F 42 45 47 49 4E 5F
+{6397}  53 54 55 4E 54 00
+end
+{6403}   has_car_been_damaged_by_char 
+hex
+{6406}  00 48 4A 5F 43 41 52 5F 58 5F 45 4E 44 5F 53 54
+{6422}  55 4E 54 00 1F 05 00 00 48 4A 5F 43 41 52 5F 59
+{6438}  00 1A
+end
+{6440} 0005:  // Note: the incorrect math opcode was used here
+hex
+{6443}  "HJ_CAR_Y_BEGIN_STUNT" 00
+end
+{6464}   has_car_been_damaged_by_car 
+hex
+{6467}  00 48 4A 5F 43 41 52 5F 59 5F 45 4E 44 5F 53 54
+{6483}  55 4E 54 00 20 05 00 00 48 4A 5F 43 41 52 5F 5A
+{6499}  00 1B
+end
+{6501} 0005:  // Note: the incorrect math opcode was used here
+hex
+{6504}  "HJ_CAR_Z_BEGIN_STUNT" 00
+end
+{6525} get_radio_channel 
+hex
+{6528}  00 48 4A 5F 43 41 52 5F 5A 5F 4D 41 58 00
+end
+{6542} create_forsale_property_pickup 
+hex
+{6545}  00 48 4A 5F 50 4C 41 59 45 52 5F 43 41 52 00 0A
+end
+{6561} 0005:  // Note: the incorrect math opcode was used here
+hex
+{6564}  "HJ_STOPPIE_DISTANCE_FEET" 00 38 05 00 00 48 4A 5F 53 54 4F 50 50 49 45 5F 44
+{6605}  49 53 54 41 4E 43 45 5F 46 45 45 54 5F 46 4C 4F
+{6621}  41 54 00 3B
+end
+{6625} 0005:  // Note: the incorrect math opcode was used here
+hex
+{6628}  "HJ_STOPPIE_DISTANCE_FLOAT" 00 39 05 00 00 48 4A 5F 53 54 4F 50 50 49 45 5F 44
+{6670}  49 53 54 41 4E 43 45 5F 4D 45 54 45 52 53 5F 46
+{6686}  4C 4F 41 54 00 3A
+end
+{6692} 0005:  // Note: the incorrect math opcode was used here
+hex
+{6695}  "HJ_STOPPIE_DISTANCE_METERS_INT" 00 36 05 00 00 48 4A 5F 53 54 4F 50 50 49 45 5F 44
+{6742}  49 53 54 41 4E 43 45 5F 4D 45 54 45 52 53 5F 52
+{6758}  45 4D 00 37
+end
+{6762} 0005:  // Note: the incorrect math opcode was used here
+hex
+{6765}  "HJ_STOPPIE_TIME" 00 35 05 00 00 48 4A 5F 53 54 55 4E 54 5F 42 4F 4E
+{6797}  55 53 00 16
+end
+{6801} 0005:  // Note: the incorrect math opcode was used here
+hex
+{6804}  "HJ_STUNT_BONUS_MULT" 00
+end
+{6824} sort_out_object_collision_with_car 
+hex
+{6827}  00 48 4A 5F 53 54 55 4E 54 5F 42 4F 4E 55 53 5F
+{6843}  54 45 4D 50 00 17
+end
+{6849} 0005:  // Note: the incorrect math opcode was used here
+hex
+{6852}  "HJ_STUNT_DISTANCE_MAX_FLOAT" 00 21 05 00 00 48 4A 5F 53 54 55 4E 54 5F 44 49 53
+{6896}  54 41 4E 43 45 5F 4D 41 58 5F 49 4E 54 00
+end
+{6910} print_help_forever_with_number 
+hex
+{6913}  00 48 4A 5F 53 54 55 4E 54 5F 44 49 53 54 41 4E
+{6929}  43 45 5F 4D 41 58 5F 52 45 4D 00 12
+end
+{6941} 0005:  // Note: the incorrect math opcode was used here
+hex
+{6944}  "HJ_STUNT_FLIPPING_FLAG" 00
+end
+{6967} get_max_wanted_level 
+hex
+{6970}  00 48 4A 5F 53 54 55 4E 54 5F 46 4C 49 50
+end
+{6984} create_player 
+hex
+{6990}  "HJ_STUNT_HEIGHT" 00 0C 05 00 00 48 4A 5F 53 54 55 4E 54 5F 48 45 49
+{7022}  47 48 54 5F 52 45
+end
+{7028} goto_if_false 5@v
+hex
+{7033}  00 48 4A 5F 53 54 55 4E 54 5F 52 4F 54 41 54 49
+{7049}  4F 4E 5F 46 4C 4F 41 54 00 26
+end
+{7059} 0005:  // Note: the incorrect math opcode was used here
+hex
+{7062}  "HJ_STUNT_ROTATION_INT" 00 14 05 00 00 48 4A 5F 54 45 4D 50 5F 46 4C 4F 41
+{7100}  54 00 3D 05 00 00 48 4A 5F 54 57 4F 57 48 45 45
+{7116}  4C 53 5F 44 49 53 54 41 4E 43 45 5F 46 45 45 54
+{7132}  00 2A
+end
+{7134} 0005:  // Note: the incorrect math opcode was used here
+hex
+{7137}  "HJ_TWOWHEELS_DISTANCE_FEET_FLOAT" 00 2D 05 00 00 48 4A 5F 54 57 4F 57 48 45 45 4C 53
+{7186}  5F 44 49 53 54 41 4E 43 45 5F 46 4C 4F 41 54 00
+{7202}  2B 05 00 00 48 4A 5F 54 57 4F 57 48 45 45 4C 53
+{7218}  5F 44 49 53 54 41 4E 43 45 5F 4D 45 54 45 52 53
+{7234}  5F 46 4C 4F 41 54 00 2C
+end
+{7242} 0005:  // Note: the incorrect math opcode was used here
+hex
+{7245}  "HJ_TWOWHEELS_DISTANCE_METERS_INT" 00 28 05 00 00 48 4A 5F 54 57 4F 57 48 45 45 4C 53
+{7294}  5F 44 49 53 54 41 4E 43 45 5F 4D 45 54 45 52 53
+{7310}  5F 52 45 4D 00 29
+end
+{7316} 0005:  // Note: the incorrect math opcode was used here
+hex
+{7319}  "HJ_TWOWHEELS_TIME" 00 27 05 00 00 48 4A 5F 57 48 45 45 4C 49 45 5F 44
+{7353}  49 53 54 41 4E 43 45 5F 46 45 45 54 00 31
+end
+{7367} 0005:  // Note: the incorrect math opcode was used here
+hex
+{7370}  "HJ_WHEELIE_DISTANCE_FEET_FLOAT" 00 34 05 00 00 48 4A 5F 57 48 45 45 4C 49 45 5F 44
+{7417}  49 53 54 41 4E 43 45 5F 46 4C 4F 41 54 00 32 05
+{7433}  00 00 48 4A 5F 57 48 45 45 4C 49 45 5F 44 49 53
+{7449}  54 41 4E 43 45 5F 4D 45 54 45 52 53 5F 46 4C 4F
+{7465}  41 54 00 33
+end
+{7469} 0005:  // Note: the incorrect math opcode was used here
+hex
+{7472}  "HJ_WHEELIE_DISTANCE_METERS_INT" 00 2F 05 00 00 48 4A 5F 57 48 45 45 4C 49 45 5F 44
+{7519}  49 53 54 41 4E 43 45 5F 4D 45 54 45 52 53 5F 52
+{7535}  45 4D 00 30
+end
+{7539} 0005:  // Note: the incorrect math opcode was used here
+hex
+{7542}  "HJ_WHEELIE_TIME" 00 2E 05 00 00 49 43 4F 4E 5F 41 49 52 59 41 52 44
+{7574}  00 4B
+end
+{7576} goto 
+hex
+{7579}  "ICON_BIG_DMOKE" 00
+end
+{7594} get_game_timer 
+hex
+{7597}  00 49 43 4F 4E 5F 43 41 53 48 00 52
+end
+{7609} goto 
+hex
+{7612}  "ICON_CATALINA" 00
+end
+{7626} switch_roads_on 
+hex
+{7629}  00 49 43 4F 4E 5F 43 45 53 41 52 00 BF 01 00 00
+{7645}  49 43 4F 4E 5F 43 45 53 41 52 5F 32 00 18
+end
+{7659} goto 
+hex
+{7662}  "ICON_CJ" 00
+end
+{7670} set_current_char_weapon 
+hex
+{7673}  00 49 43 4F 4E 5F 43 4A 5F 32 00 70
+end
+{7685} goto 
+hex
+{7688}  "ICON_CRASH" 00
+end
+{7699} set_object_coordinates 
+hex
+{7702}  00 49 43 4F 4E 5F 4C 4F 43 4F 53 59 4E 44 49 43
+{7718}  41 54 45 00
+end
+{7722} print_big_q 
+hex
+{7725}  00 49 43 4F 4E 5F 4D 41 44 44 4F 47 00 4D
+end
+{7739} goto 
+hex
+{7742}  "ICON_MAFIA_CASINO" 00 4E 02 00 00 49 43 4F 4E 5F 4F 47 5F 4C 4F 43 00
+{7776}  BE 01 00 00 49 43 4F 4E 5F 52 41 43 45 00 1A 02
+{7792}  00 00 49 43 4F 4E 5F 52 59 44 45 52 00 BB
+end
+{7806} wait 
+hex
+{7809}  "ICON_SCHOOL" 00
+end
+{7821} draw_corona 
+hex
+{7824}  00 49 43 4F 4E 5F 53 57 45 45 54 00 BA 01 00 00
+{7840}  49 43 4F 4E 5F 53 57 45 45 54 5F 32 00 71
+end
+{7854} goto 
+hex
+{7857}  "ICON_TORENO" 00 4A 02 00 00 49 43 4F 4E 5F 54 52 49 41 44 53 00
+{7885}  19 02 00 00 49 43 4F 4E 5F 54 52 49 41 44 53 5F
+{7901}  43 41 53 49 4E 4F 00 4C
+end
+{7909} goto 
+hex
+{7912}  "ICON_TRUTH" 00
+end
+{7923} switch_roads_off 
+hex
+{7926}  00 49 43 4F 4E 5F 57 4F 4F 5A 49 45 00 16
+end
+{7940} goto 
+hex
+{7943}  "ICON_ZERO" 00
+end
+{7953} set_target_car_for_mission_garage 
+hex
+{7956}  00 49 4D 50 4F 52 54 5F 43 41 52 00 5E 04 00 00
+{7972}  49 4D 50 4F 52 54 5F 43 41 52 53 5F 4D 4F 44 45
+{7988}  4C 00
+end
+{7990} register_fastest_time 
+hex
+{7993}  00 49 4D 50 4F 52 54 5F 43 41 52 5F 48 41 4E 44
+{8009}  4C 45 53 00
+end
+{8013} get_dead_char_pickup_coords 
+hex
+{8016}  00 49 4D 50 4F 52 54 5F 43 41 52 5F 4E 41 4D 45
+{8032}  53 00 83 04 00 00 49 4D 50 4F 52 54 5F 43 41 52
+{8048}  5F 50 41 4E 45 4C 00 82
+end
+{8056} 0004:  // Note: the incorrect math opcode was used here
+hex
+{8059}  "IMPORT_CAR_PRICE" 00 5F 04 00 00 49 4D 50 4F 52 54 5F 44 41 59 53 00
+end
+{8092} remove_all_char_weapons 
+hex
+{8095}  00 49 4D 50 4F 52 54 5F 4D 4F 44 45 4C 5F 4E 41
+{8111}  4D 45 00 7F
+end
+{8115} 0004:  // Note: the incorrect math opcode was used here
+hex
+{8118}  "IMPORT_NEW_AVAILABLE_CARS_NUMBER" 00 9E 04 00 00 49 4D 50 4F 52 54 5F 50 41 4E 45 4C
+{8167}  5F 52 4F 57 00 7D
+end
+{8173} 0004:  // Note: the incorrect math opcode was used here
+hex
+{8176}  "IMPORT_PRICE_MULTIPLIER" 00
+end
+{8200} heli_goto_coords 
+hex
+{8203}  00 49 4D 50 4F 55 4E 44 5F 54 4F 57 4E 5F 4E 55
+{8219}  4D 42 45 52 00 49
+end
+{8225} 0007:  // Note: the incorrect math opcode was used here
+hex
+{8228}  "INTERIOR_DECISION_MAKER_A" 00 E8 04 00 00 49 4E 54 45 52 49 4F 52 5F 44 45 43
+{8270}  49 53 49 4F 4E 5F 4D 41 4B 45 52 5F 42 00
+end
+{8284}   is_object_in_area_2d 
+hex
+{8287}  00 49 4E 54 52 4F 5F 54 4F 54 41 4C 5F 50 41 53
+{8303}  53 45 44 5F 4D 49 53 53 49 4F 4E 53 00 C0
+end
+{8317} wait 
+hex
+{8320}  "JFUD_FOOD_SELLER_ANGLE" 00 4C 27 00 00 4A 46 55 44 5F 48 45 41 4C 54 48 59
+{8359}  5F 46 4F 4F 44 5F 4D 4F 44 45 4C 00 5A 27 00 00
+{8375}  4A 46 55 44 5F 48 49 47 48 5F 46 4F 4F 44 5F 4D
+{8391}  4F 44 45 4C 00 59
+end
+{8397}   is_float_lvar_greater_than_float_var 
+hex
+{8400}  "JFUD_LOW_FOOD_MODEL" 00 57 27 00 00 4A 46 55 44 5F 4D 45 44 5F 46 4F 4F
+{8436}  44 5F 4D 4F 44 45 4C 00 58 27 00 00 4A 46 55 44
+{8452}  5F 50 4C 41 59 45 52 5F 48 45 41 4C 54 48 00 46
+end
+{8468}   is_float_lvar_greater_than_float_var 
+hex
+{8471}  "JFUD_SELECTED_FOOD" 00 35 27 00 00 4A 46 55 44 5F 53 54 41 47 45 00 3E
+end
+{8506}   is_float_lvar_greater_than_float_var 
+hex
+{8509}  "JFUD_STAT_FAT" 00 45 27 00 00 4A 46 55 44 5F 58 5F 41 49 4D 5F 43
+{8539}  41 4D 45 52 41 00 54 27 00 00 4A 46 55 44 5F 58
+{8555}  5F 43 41 4D 45 52 41 00 51 27 00 00 4A 46 55 44
+{8571}  5F 58 5F 46 4F 4F 44 5F 53 45 4C 4C 45 52 00 49
+end
+{8587}   is_float_lvar_greater_than_float_var 
+hex
+{8590}  "JFUD_X_OFFSET" 00 4D 27 00 00 4A 46 55 44 5F 59 5F 41 49 4D 5F 43
+{8620}  41 4D 45 52 41 00 55 27 00 00 4A 46 55 44 5F 59
+{8636}  5F 43 41 4D 45 52 41 00 52 27 00 00 4A 46 55 44
+{8652}  5F 59 5F 46 4F 4F 44 5F 53 45 4C 4C 45 52 00 4A
+end
+{8668}   is_float_lvar_greater_than_float_var 
+hex
+{8671}  "JFUD_Y_OFFSET" 00 4E 27 00 00 4A 46 55 44 5F 5A 5F 41 49 4D 5F 43
+{8701}  41 4D 45 52 41 00 56 27 00 00 4A 46 55 44 5F 5A
+{8717}  5F 43 41 4D 45 52 41 00 53 27 00 00 4A 46 55 44
+{8733}  5F 5A 5F 46 4F 4F 44 5F 53 45 4C 4C 45 52 00 4B
+end
+{8749}   is_float_lvar_greater_than_float_var 
+hex
+{8752}  "JFUD_Z_OFFSET" 00 4F 27 00 00 4C 45 56 49 41 54 48 41 4E 5F 50 41
+{8782}  52 4B 45 44 00 1F
+end
+{8788} 0009:  // Note: the incorrect math opcode was used here
+hex
+{8791}  "LOWR_CONT_SCRIPT_LAUNCHED" 00
+end
+{8817}   is_point_on_screen 
+hex
+{8820}  00 4C 4F 57 52 5F 4C 41 53 54 5F 44 49 53 50 4C
+{8836}  41 59 45 44 5F 54 45 58 54 5F 49 44
+end
+{8848}   is_char_stopped_in_angled_area_on_foot_3d 0 in_cube_fll_corner_at 
+hex
+{8853}  "LOWR_OPPOSITION_POINTS" 00 FB 03 00 00 4C 4F 57 52 5F 50 4C 41 59 45 52 5F
+{8892}  50 4F 49 4E 54 53 00 FA
+end
+{8900} shake_cam 
+hex
+{8903}  "LSGYM_ICON" 00
+end
+{8914} add_timed_float_var_to_float_var 
+hex
+{8917}  00 4C 53 5F 46 49 4E 41 4C 5F 4D 49 53 53 49 4F
+{8933}  4E 53 5F 53 54 41 52 54 45 44 00 39 00 00 00 4C
+{8949}  53 5F 46 49 4E 41 4C 5F 54 4F 54 41 4C 5F 50 41
+{8965}  53 53 45 44 5F 4D 49 53 53 49 4F 4E 53 00 CA 01
+{8981}  00 00 4C 56 47 59 4D 5F 49 43 4F 4E 00 47
+end
+{8995} 000A:  // Note: the incorrect math opcode was used here
+hex
+{8998}  "MANSION_TOTAL_PASSED_MISSIONS" 00 72 02 00 00 4D 41 52 4B 45 52 5F 43 41 54 41 4C
+{9044}  49 4E 41 00
+end
+{9048} print_with_number_big 
+hex
+{9051}  00 4D 41 52 4B 45 52 5F 43 45 53 41 52 5F 4C 53
+{9067}  00 B8
+end
+{9069} wait 
+hex
+{9072}  "MARKER_CESAR_MONTGOMERY" 00
+end
+{9096} print_with_number_now 
+hex
+{9099}  00 4D 41 52 4B 45 52 5F 43 52 41 53 48 5F 4C 53
+{9115}  00 B6
+end
+{9117} wait 
+hex
+{9120}  "MARKER_EMMETS_GUN" 00
+end
+{9138}   is_int_lvar_greater_than_int_var 
+hex
+{9141}  00 4D 41 52 4B 45 52 5F 47 41 4E 54 4F 4E 5F 43
+{9157}  4C 4F 54 48 45 53 5F 53 48 4F 50 00
+end
+{9169} attach_searchlight_to_searchlight_object 
+hex
+{9172}  00 4D 41 52 4B 45 52 5F 49 44 4C 45 57 4F 4F 44
+{9188}  5F 42 41 52 42 45 52 00
+end
+{9196} set_la_riots 
+hex
+{9199}  00 4D 41 52 4B 45 52 5F 49 44 4C 45 57 4F 4F 44
+{9215}  5F 50 49 5A 5A 45 52 49 41 00
+end
+{9225} remove_char_from_group 
+hex
+{9228}  00 4D 41 52 4B 45 52 5F 50 49 4C 4F 54 5F 53 43
+{9244}  48 4F 4F 4C 00 50
+end
+{9250} goto 
+hex
+{9253}  "MARKER_QUARRY_MISSION" 00 74 02 00 00 4D 41 52 4B 45 52 5F 53 57 45 45 54
+{9291}  5F 48 4F 55 53 45 00 B3
+end
+{9299} wait 
+hex
+{9302}  "MARKER_TRIADS_SF_GARAGE" 00
+end
+{9326} remove_pickup 
+hex
+{9329}  00 4D 41 52 4B 45 52 5F 54 52 55 43 4B 49 4E 47
+{9345}  5F 4D 49 53 53 49 4F 4E 00 16 00 00 00 4D 41 52
+{9361}  4B 45 52 5F 54 52 55 54 48 5F 46 41 52 4D 00 E6
+end
+{9377} wait 
+hex
+{9380}  "MARKER_WANG_CARS" 00
+end
+{9397} 0042:    // Note: the incorrect math opcode was used here
+hex
+{9400}  00 4D 41 58 5F 57 41 47 45 52 00 F0
+end
+{9412} 0023:    // Note: the incorrect math opcode was used here
+hex
+{9415}  "MEDIC_UNIFORM_AVAILABLE" 00
+end
+{9439}   is_this_model_a_car 
+hex
+{9442}  00 4D 49 53 53 49 4F 4E 5F 42 41 43 4B 5F 54 4F
+{9458}  5F 53 43 48 4F 4F 4C 5F 50 41 53 53 45 44 00 56
+{9474}  00 00 00 4D 49 53 53 49 4F 4E 5F 42 41 44 4C 41
+{9490}  4E 44 53 5F 50 41 53 53 45 44 00 ED
+end
+{9502} wait 
+hex
+{9505}  "MISSION_BEATTHECOCK_PASSED" 00
+end
+{9532} plane_attack_player 
+hex
+{9535}  00 4D 49 53 53 49 4F 4E 5F 42 45 41 54 54 48 45
+{9551}  43 4F 43 4B 5F 54 59 50 45 00
+end
+{9561} set_car_stay_in_slow_lane 
+hex
+{9564}  00 4D 49 53 53 49 4F 4E 5F 42 4C 4F 4F 44 52 49
+{9580}  4E 47 5F 50 41 53 53 45 44 00 95 07 00 00 4D 49
+{9596}  53 53 49 4F 4E 5F 42 4D 58 5F 53 54 55 4E 54 5F
+{9612}  50 41 53 53 45 44 00 EB
+end
+{9620} 000A:  // Note: the incorrect math opcode was used here
+hex
+{9623}  "MISSION_BOAT_SCHOOL_PASSED" 00
+end
+{9650} get_beat_proximity 
+hex
+{9653}  00 4D 49 53 53 49 4F 4E 5F 42 55 52 47 4C 41 52
+{9669}  59 5F 50 41 53 53 45 44 00 D2
+end
+{9679} 0005:  // Note: the incorrect math opcode was used here
+hex
+{9682}  "MISSION_CESAR_VIALPANDO_PASSED" 00 C3 00 00 00 4D 49 53 53 49 4F 4E 5F 43 48 49 4C
+{9729}  49 41 44 5F 43 48 41 4C 4C 45 4E 47 45 5F 50 41
+{9745}  53 53 45 44 00 09 07 00 00 4D 49 53 53
+end
+{9749} clear_object_last_weapon_damage 
+hex
+{9758}  "ION_COURIER_LS_PASSED" 00 C8 07 00 00 4D 49 53 53 49 4F 4E 5F 43 4F 55 52
+{9796}  49 45 52 5F 4C 56 5F 50 41 53 53 45 44 00
+end
+{9810} task_complex_pickup_object 
+hex
+{9813}  00 4D 49 53 53 49 4F 4E 5F 43 4F 55 52 49 45 52
+{9829}  5F 53 46 5F 50 41 53 53 45 44 00 CA
+end
+{9841} 0007:  // Note: the incorrect math opcode was used here
+hex
+{9844}  "MISSION_DRIVING_SCHOOL_PASSED" 00 99 08 00 00 4D 49 53 53 49 4F 4E 5F 49 4E 54 52
+{9890}  4F 5F 50 41 53 53 45 44 00 18 00 00 00 4D 49 53
+{9906}  53 49 4F 4E 5F 4B 49 43 4B 53 54 41 52 54 5F 50
+{9922}  41 53 53 45 44 00
+end
+{9928} add_int_lvar_to_int_lvar 
+hex
+{9931}  00 4D 49 53 53 49 4F 4E 5F 4C 45 41 52 4E 49 4E
+{9947}  47 5F 54 4F 5F 46 4C 59 5F 50 41 53 53 45 44 00
+{9963}  57 00 00 00 4D 49 53 53 49 4F 4E 5F 4C 4F 43 41
+{9979}  4C 5F 4C 49 51 55 4F 52 5F 53 54 4F 52 45 5F 50
+{9995}  41 53 53 45 44 00
+end
+{10001}   is_car_on_screen 
+hex
+{10004}  00 4D 49 53 53 49 4F 4E 5F 4C 4F 57 52 49 44 45
+{10020}  52 5F 50 41 53 53 45 44 00 C9
+end
+{10030} wait 
+hex
+{10033}  "MISSION_NRG500_STUNT_PASSED" 00 EC 0A 00 00 4D 49 53 53 49 4F 4E 5F 50 49 4D 50
+{10077}  49 4E 47 5F 50 41 53 53 45 44 00 C7
+end
+{10089} 0007:  // Note: the incorrect math opcode was used here
+hex
+{10092}  "MISSION_QUARRY_PASSED" 00 D5 05 00 00 4D 49 53 53 49 4F 4E 5F 52 55 4E 4E
+{10130}  49 4E 47 5F 44 4F 47 5F 46 41 49 4C 45 44 00 1D
+{10146}  00 00 00 4D 49 53 53 49 4F 4E 5F 53 4D 41 4C 4C
+{10162}  5F 54 4F 57 4E 5F 42 41 4E 4B 5F 50 41 53 53 45
+{10178}  44 00
+end
+{10180}   is_char_on_screen 
+hex
+{10183}  00 4D 49 53 53 49 4F 4E 5F 54 41 4E 4B 45 52 5F
+{10199}  43 4F 4D 4D 41 4E 44 45 52 5F 50 41 53 53 45 44
+{10215}  00 CC
+end
+{10217} goto 
+hex
+{10220}  "MISSION_TAXI_PASSED" 00
+end
+{10240} task_go_straight_to_coord 
+hex
+{10243}  00 4D 49 53 53 49 4F 4E 5F 54 52 55 43 4B 49 4E
+{10259}  47 5F 50 41 53 53 45 44 00 D4
+end
+{10269} 0005:  // Note: the incorrect math opcode was used here
+hex
+{10272}  "MISSION_VIGILANTE_PASSED" 00 D0 05 00 00 4D 49 53 53 49 4F 4E 5F 57 55 5A 49
+{10313}  4D 55 5F 53 54 41 52 54 45 44 5F 46 4C 41 47 00
+{10329}  94 08 00 00 4D 4F 56 45 5F 41 58 49 53 5F
+end
+{10343} add_int_var_to_int_var 0@v += 
+hex
+{10349}  "MOVE_AXIS_Y" 00
+end
+{10361} 0012:  // Note: the incorrect math opcode was used here
+hex
+{10364}  00 4F 42 4A 45 43 54 5F 4D 5F 41 35 31 5F 42 4C
+{10380}  41 53 54 44 4F 4F 52 4C 00 6C
+end
+{10390} 000A:  // Note: the incorrect math opcode was used here
+hex
+{10393}  "OBJECT_M_A51_BLASTDOORR" 00
+end
+{10417} delete_widget 
+hex
+{10420}  00 4F 42 4A 45 43 54 5F 4D 5F 41 35 31 5F 56 45
+{10436}  4E 54 43 4F 56 45 52 42 00 39
+end
+{10446} 0014:  // Note: the incorrect math opcode was used here
+hex
+{10449}  "OG_LOC_TOTAL_PASSED_MISSIONS" 00
+end
+{10478} dont_remove_object 
+hex
+{10481}  00 4F 4E 4D 49 53 53 49 4F 4E 00 99
+end
+{10493} wait 
+hex
+{10496}  "ONMISSION_BURGLARY" 00
+end
+{10515} create_car 
+hex
+{10518}  00 4F 4E 4D 49 53 53 49 4F 4E 5F 43 48 49 4C 49
+{10534}  41 44 00 AF 00 00 00 4F 4E 4D 49 53 53 49 4F 4E
+{10550}  5F 43 4F 55 52 49 45 52 00 BD 00 00 00 4F 4E 4D
+{10566}  49 53 53 49 4F 4E 5F 46 49 52 45 46 49 47 48 54
+{10582}  45 52 00 95 00 00 00 4F 4E 4D 49 53 53 49 4F 4E
+{10598}  5F 47 59 4D 46 49 47 48 54 00 6C 09 00 00 4F 4E
+{10614}  4D 49 53 53 49 4F 4E 5F 4D 49 4B 45 5F 54 4F 52
+{10630}  45 4E 4F 00 08 07 00 00 4F 4E 4D 4F 00 08 07 00
+{10637}  00 4F 4E 4D 49 53 53 49 4F 4E 5F 50 41 52 41 4D
+{10653}  45 44 49 43 00 94 00 00 00 4F 4E 4D 49 53 53 49
+{10669}  4F 4E 5F 53 48 4F 4F 54 49 4E 47 00
+end
+{10681} clear_relationship 
+hex
+{10684}  00 4F 4E 4D 49 53 53 49 4F 4E 5F 53 54 55 4E 54
+{10700}  5F 42 4D 58 00 98 00 00 00 4F 4E 4D 49 53 53 49
+{10716}  4F 4E 5F 53 54 55 4E 54 5F 4E 52 47 35 30 30 00
+end
+{10732} generate_random_int 
+hex
+{10735}  00 4F 4E 4D 49 53 53 49 4F 4E 5F 54 41 58 49 00
+{10751}  B6 00 00 00 50 41 52 41 43 48 55 54 45 5F 43 52
+{10767}  45 41 54 49 4F 4E 5F 53 54 41 47 45 00 D9
+end
+{10781} 0005:  // Note: the incorrect math opcode was used here
+hex
+{10784}  "PARAMEDIC_MISSION_LEVEL" 00 13 20 00 00 50 41 52 4B 45 44 5F 42 4D 58 5F 47
+{10824}  4C 45 4E 5F 50 41 52 4B 00 EF
+end
+{10834} 000A:  // Note: the incorrect math opcode was used here
+hex
+{10837}  "PARKED_FCR900" 00 91 08 00 00 50 41 52 4B 45 44 5F 46 43 52 39 30
+{10867}  30 5F 45 58 49 53 54 53 00 8E
+end
+{10877} 0008:  // Note: the incorrect math opcode was used here
+hex
+{10880}  "PARKED_FREEWAY" 00
+end
+{10895} set_timer_beep_countdown_time 
+hex
+{10898}  00 50 41 52 4B 45 44 5F 46 52 45 45 57 41 59 5F
+{10914}  45 58 49 53 54 53 00 8D
+end
+{10922} 0008:  // Note: the incorrect math opcode was used here
+hex
+{10925}  "PARKED_GIRLFRIEND_CARS" 00 02 0B 00 00 50 41 52 4B 45 44 5F 47 49 52 4C 46
+{10964}  52 49 45 4E 44 5F 43 41 52 53 5F 4E 55 4D 50 4C
+{10980}  41 54 45 00 08 0B 00 00 50 41 52 45 00 08 0B 00
+{10987}  00 50 41 52 4B 45 44 5F 48 55 4E 54 45 52 00 A6
+end
+{11003} 0007:  // Note: the incorrect math opcode was used here
+hex
+{11006}  "PARKED_HUNTER_EXISTS" 00
+end
+{11027}   is_char_in_any_searchlight 
+hex
+{11030}  00 50 41 52 4B 45 44 5F 48 59 44 52 41 00 A1 02
+{11046}  00 00 50 41 52 4B 45 44 5F 49 4D 50 45 58 50 4D
+{11062}  5F 43 41 52 53 00 0E 0B 00 00 50 41 52 4B 45 44
+{11078}  5F 4A 45 54 4D 41 58 00 C6
+end
+{11087} 0007:  // Note: the incorrect math opcode was used here
+hex
+{11090}  "PARKED_JETMAX_EXISTS" 00
+end
+{11111} get_object_quaternion 
+hex
+{11114}  00 50 41 52 4B 45 44 5F 4D 41 52 51 55 49 53 00
+end
+{11130} set_object_quaternion 
+hex
+{11133}  00 50 41 52 4B 45 44 5F 4D 41 52 51 55 49 53 5F
+{11149}  45 58 49 53 54 53 00 C1
+end
+{11157} 0007:  // Note: the incorrect math opcode was used here
+hex
+{11160}  "PARKED_NRG500" 00 92 08 00 00 50 41 52 4B 45 44 5F 4E 52 47 35 30
+{11190}  30 5F 45 41 53 54 45 52 5F 42 41 53 49 4E 00 F3
+end
+{11206} 000A:  // Note: the incorrect math opcode was used here
+hex
+{11209}  "PARKED_NRG500_EXISTS" 00 8F 08 00 00 50 41 52 4B 45 44 5F 50 4C 41 4E 45
+{11246}  53 00 45 14 00 00 50 41 52 4B 45 44 5F 52 48 49
+{11262}  4E 4F 00 D9
+end
+{11266} 000A:  // Note: the incorrect math opcode was used here
+hex
+{11269}  "PARKED_RUSTLER" 00
+end
+{11284} get_sequence_progress_recursive 
+hex
+{11287}  00 50 41 52 4B 45 44 5F 52 55 53 54 4C 45 52 5F
+{11303}  45 58 49 53 54 53 00 A7
+end
+{11311} 0007:  // Note: the incorrect math opcode was used here
+hex
+{11314}  "PARKED_SF_PLANES" 00 61 14 00 00 50 41 52 4B 45 44 5F 53 51 55 41 4C
+{11347}  4F 00
+end
+{11349} get_vehicle_quaternion 
+hex
+{11352}  00 50 41 52 4B 45 44 5F 53 51 55 41 4C 4F 5F 45
+{11368}  58 49 53 54 53 00 C2 07 00 00 50 41 52 4B 45 44
+{11384}  5F 53 54 55 4E 54 00 A5
+end
+{11392} 0007:  // Note: the incorrect math opcode was used here
+hex
+{11395}  "PARKED_STUNT_EXISTS" 00
+end
+{11415} set_area51_sam_site 
+hex
+{11418}  00 50 48 4F 4E 45 5F 52 49 4E 47 49 4E 47 5F 46
+{11434}  4C 41 47 00
+end
+{11438} 000F:  // Note: the incorrect math opcode was used here
+hex
+{11441}  00 50 49 43 4B 55 50 5F 45 4D 4D 45 54 53 5F 43
+{11457}  4F 4C 54 34 35 00
+end
+{11463} 0020:    // Note: the incorrect math opcode was used here
+hex
+{11466}  00 50 49 43 4B 55 50 5F 49 4E 46 4F 5F 43 4F 4E
+{11482}  56 45 52 53 41 54 49 4F 4E 00
+end
+{11492} add_timed_float_var_to_float_lvar 
+hex
+{11495}  00 50 49 43 4B 55 50 5F 49 4E 46 4F 5F 48 4F 53
+{11511}  50 49 54 41 4C 00 9D 02 00 00 50 49 43 4B 55 50
+{11527}  5F 49 4E 46 4F 5F 48 4F 53 50 49 54 41 4C 5F 32
+{11543}  00 9E
+end
+{11545} goto 
+hex
+{11548}  "PICKUP_INFO_POLICE" 00 9F 02 00 00 50 49 43 4B 55 50 5F 4B 45 59 43 41
+{11583}  52 44 00 31
+end
+{11587} shake_cam 
+hex
+{11590}  "PICKUP_KEYCARD_COLLECTED" 00
+end
+{11615} set_char_bleeding 
+hex
+{11618}  00 50 49 43 4B 55 50 5F 50 41 52 41 43 48 55 54
+{11634}  45 00 4D 20 00 00 50 49 4C 4F 54 5F 4C 49 43 45
+{11650}  4E 53 45 5F 4F 42 54 41 49 4E 45 44 00 A3
+end
+{11664} 0007:  // Note: the incorrect math opcode was used here
+hex
+{11667}  "PIMP_SUIT_AVAILABLE" 00
+end
+{11687} switch_on_ground_searchlight 
+hex
+{11690}  00 50 4C 41 49 4E 53 5F 50 4C 41 4E 45 5F 46 4C
+{11706}  59 57 41 59 00 23
+end
+{11712}   is_float_lvar_greater_than_float_lvar 
+hex
+{11715}  "PLANES_CONVERSATION_YES" 00 1A 25 00 00 50 4C 41 4E 45 53 5F 44 41 59 4E 41
+{11755}  4D 45 53 00 08 25 00 00 50 4C 41 53 00 08 25 00
+{11762}  00 50 4C 41 4E 45 53 5F 53 54 41 54 5F 55 4E 4C
+{11778}  4F 43 4B 45 44 5F 43 49 54 49 45 53 5F 4E 55 4D
+{11794}  42 45 52 00 19 25 00 00 50 4C 41 4E 45 53 5F 57
+{11810}  45 45 4B 44 41 59 00 18
+end
+{11818}   is_float_lvar_greater_than_float_lvar 
+hex
+{11821}  "PLAYER_ACTOR" 00
+end
+{11834} shake_cam 
+hex
+{11837}  00 50 4C 41 59 45 52 5F 43 48 41 52 00 02 00 00
+{11853}  00 50 4C 41 59 45 52 5F 47 52 4F 55
+end
+{11865} gosub 0@s
+hex
+{11870}  00 50 4C 41 59 45 52 5F 49 4E 5F 49 4E 54 45 52
+{11886}  49 4F 52 00
+end
+{11890} pop_car_boot 
+hex
+{11893}  00 50 4C 41 59 45 52 5F 57 41 4E 54 45 44 5F 4C
+{11909}  45 56 45 4C 00 EB
+end
+{11915} 0004:  // Note: the incorrect math opcode was used here
+hex
+{11918}  "POKER_BET_ONE_HEIGHT" 00 E7 22 00 00 50 4F 4B 45 52 5F 42 45 54 5F 4F 4E
+{11955}  45 5F 57 49 44 54 48 00 E6 22 00 00 50 4F 4B 45
+{11971}  52 5F 42 4F 52 44 45 52 5F 54 48 49 43 4B 4E 45
+{11987}  53 53 00 E1
+end
+{11991} 0022:    // Note: the incorrect math opcode was used here
+hex
+{11994}  "POKER_BUTTON_TEXT_OFFSET" 00 4E 23 00 00 50 4F 4B 45 52 5F 43 41 52 44 5F 48
+{12035}  45 49 47 48 54 00 DC 22 00 00 50 4F 4B 45 52 5F
+{12051}  43 41 52 44 5F 57 49 44 54 48 00 DD
+end
+{12063} 0022:    // Note: the incorrect math opcode was used here
+hex
+{12066}  "POKER_COUNTER" 00 CB 22 00 00 50 4F 4B 45 52 5F 44 45 41 4C 5F 48
+{12096}  45 49 47 48 54 00 E5 22 00 00 50 4F 4B 45 52 5F
+{12112}  44 45 41 4C 5F 57 49 44 54 48 00 E4
+end
+{12124} 0022:    // Note: the incorrect math opcode was used here
+hex
+{12127}  "POKER_HOLD_BUTTON_OFFSET" 00 DE 22 00 00 50 4F 4B 45 52 5F 48 4F 4C 44 5F 48
+{12168}  45 49 47 48 54 00 E0 22 00 00 50 4F 4B 45 52 5F
+{12184}  48 4F 4C 44 5F 57 49 44 54 48 00 DF
+end
+{12196} 0022:    // Note: the incorrect math opcode was used here
+hex
+{12199}  "POKER_LINE_HEIGHT" 00 03 23 00 00 50 4F 4B 45 52 5F 4C 49 4E 45 5F 57
+{12233}  49 44 54 48 00 FA
+end
+{12239} 0022:    // Note: the incorrect math opcode was used here
+hex
+{12242}  "POKER_TABLE_HEIGHT" 00 53 23 00 00 50 4F 4B 45 52 5F 54 41 42 4C 45 5F
+{12277}  57 49 44 54 48 00 52 23 00 00 50 4F 4B 45 52 5F
+{12293}  54 41 42 4C 45 5F 58 00 50 23 00 00 50 4F 4B 45
+{12309}  52 5F 54 41 42 4C 45 5F 59 00 51 23 00 00 50 4F
+{12325}  4B 45 52 5F 54 45 58 54 5F 43 45 4E 54 52 45 00
+{12341}  30 23 00 00 50 4F 4B 45 52 5F 54 45 58 54 5F 43
+{12357}  4F 4C 4F 52 5F 42 00 24
+end
+{12365} 0023:    // Note: the incorrect math opcode was used here
+hex
+{12368}  "POKER_TEXT_COLOR_G" 00 1E 23 00 00 50 4F 4B 45 52 5F 54 45 58 54 5F 43
+{12403}  4F 4C 4F 52 5F 52 00 18
+end
+{12411} 0023:    // Note: the incorrect math opcode was used here
+hex
+{12414}  "POKER_TEXT_EDGE" 00 36 23 00 00 50 4F 4B 45 52 5F 54 45 58 54 5F 45
+{12446}  44 47 45 5F 42 00 48 23 00 00 50 4F 4B 45 52 5F
+{12462}  54 45 58 54 5F 45 44 47 45 5F 47 00 42 23 00 00
+{12478}  50 4F 4B 45 52 5F 54 45 58 54 5F 45 44 47 45 5F
+{12494}  52 00 3C 23 00 00 50 4F 4B 45 52 5F 54 45 58 54
+{12510}  5F 46 4F 4E 54 00 2A 23 00 00 50 4F 4B 45 52 5F
+{12526}  54 49 4C 45 5F 48 45 49 47 48 54 00 6C 23 00 00
+{12542}  50 4F 4B 45 52 5F 54 49 4C 45 5F 54 59 50 45 00
+{12558}  4F 23 00 00 50 4F 4B 45 52 5F 54 49 4C 45 5F 57
+{12574}  49 44 54 48 00 6B
+end
+{12580} 0023:    // Note: the incorrect math opcode was used here
+hex
+{12583}  "POKER_X_BET_ONE" 00 B3 22 00 00 50 4F 4B 45 52 5F 58 5F 43 41 52 44
+{12615}  00 A9
+end
+{12617} 0022:    // Note: the incorrect math opcode was used here
+hex
+{12620}  "POKER_X_COL" 00 B7 22 00 00 50 4F 4B 45 52 5F 58 5F 44 45 41 4C
+{12648}  00 B5
+end
+{12650} 0022:    // Note: the incorrect math opcode was used here
+hex
+{12653}  "POKER_X_LINE" 00 E8 22 00 00 50 4F 4B 45 52 5F 58 5F 53 43 52 45
+{12682}  45 4E 00 CC
+end
+{12686} 0022:    // Note: the incorrect math opcode was used here
+hex
+{12689}  "POKER_X_TEXT_SCALE" 00 0C 23 00 00 50 4F 4B 45 52 5F 59 5F 42 45 54 5F
+{12724}  4F 4E 45 00 B4 22 00 00 50 4F 4B 45 52 5F 59 5F
+{12740}  43 41 52 44 00 AE
+end
+{12746} 0022:    // Note: the incorrect math opcode was used here
+hex
+{12749}  "POKER_Y_DEAL" 00 B6 22 00 00 50 4F 4B 45 52 5F 59 5F 4C 49 4E 45
+{12778}  00 F1
+end
+{12780} 0022:    // Note: the incorrect math opcode was used here
+hex
+{12783}  "POKER_Y_ROW" 00 BD 22 00 00 50 4F 4B 45 52 5F 59 5F 53 43 52 45
+{12811}  45 4E 00 D4
+end
+{12815} 0022:    // Note: the incorrect math opcode was used here
+hex
+{12818}  "POKER_Y_TEXT_SCALE" 00 12 23 00 00 50 52 4F 50 45 52 54 59 5F 42 4F 55
+{12853}  47 48 54 5F 46 4C 41 47 53 00
+end
+{12863}   is_current_char_weapon 
+hex
+{12866}  00 50 52 4F 50 45 52 54 59 5F 42 55 59 49 4E 47
+{12882}  5F 4E 4F 57 00 C7
+end
+{12888} 0006:  // Note: the incorrect math opcode was used here
+hex
+{12891}  "PROPERTY_INDEXES" 00
+end
+{12908} get_car_forward_x 
+hex
+{12911}  00 51 55 41 52 52 59 5F 4D 49 53 53 49 4F 4E 53
+{12927}  5F 50 41 53 53 45 44 00 EB 1F 00 00 51 55 41 52
+{12943}  52 59 5F 53 54 41 47 45 00 F5
+end
+{12953}   is_int_lvar_greater_than_int_var 
+hex
+{12956}  "RACES_BEST_RESULT" 00
+end
+{12974} plane_attack_player_using_dog_fight 
+hex
+{12977}  00 52 41 43 45 53 5F 43 55 52 52 45 4E 54 5F 42
+{12993}  45 53 54 5F 54 49 4D 45 00 C0
+end
+{13003} 0008:  // Note: the incorrect math opcode was used here
+hex
+{13006}  "RACES_NEW_BEST_TIME" 00
+end
+{13026} switch_arrest_penalties 
+hex
+{13029}  00 52 41 43 45 53 5F 57 4F 4E 00 FC
+end
+{13041} 0008:  // Note: the incorrect math opcode was used here
+hex
+{13044}  "RACES_WON_NUMBER" 00
+end
+{13061} get_latest_console_command 
+hex
+{13064}  00 52 41 43 45 5F 49 4E 44 45 58 00
+end
+{13076} point_camera_at_point 
+hex
+{13079}  00 52 41 43 49 4E 47 5F 53 55 49 54 5F 41 56 41
+{13095}  49 4C 41 42 4C 45 00 00
+end
+{13103} 000A:  // Note: the incorrect math opcode was used here
+hex
+{13106}  "RECALL_TIME" 00
+end
+{13118} get_progress_percentage 
+hex
+{13121}  00 52 49 4F 54 5F 54 4F 54 41 4C 5F 50 41 53 53
+{13137}  45 44 5F 4D 49 53 53 49 4F 4E 53 00 75 02 00 00
+{13153}  52 4F 55 4C 45 54 45 5F 43 41 53 48 5F 57 4F 4E
+{13169}  00 66
+end
+{13171} 0021:    // Note: the incorrect math opcode was used here
+hex
+{13174}  "ROULETE_CHIPS" 00 71 21 00 00 52 4F 55 4C 45 54 45 5F 50 4C 41 59
+{13204}  45 52 5F 43 41 53 48 00 6F 21 00 00 52 55 52 41
+{13220}  4C 5F 43 4C 4F 54 48 45 53 5F 41 56 41 49 4C 41
+{13236}  42 4C 45 00
+end
+{13240} set_respawn_point_for_duration_of_mission 
+hex
+{13243}  00 52 59 44 45 52 5F 43 41 52
+end
+{13253}   not clear_object_last_weapon_damage 
+{13256} nop 
+hex
+{13258}  "RYDER_TOTAL_PASSED_MISSIONS" 00
+end
+{13286} dont_remove_char 
+hex
+{13289}  00 53 41 56 45 5F 50 49 43 4B 55 50 53 00
+end
+{13303} close_garage 
+hex
+{13306}  00 53 41 56 45 5F 50 49 43 4B 55 50 53 5F 45 58
+{13322}  49 53 54 00 74 03 00 00 53 41 56 45 5F 50 49 43
+{13338}  4B 55 50 53 5F 49 4E 44 45 58 00 73
+end
+{13350} shake_cam 
+hex
+{13353}  "SAVE_PICKUPS_X" 00
+end
+{13368} create_random_char 
+hex
+{13371}  00 53 41 56 45 5F 50 49 43 4B 55 50 53 5F 59 00
+{13387}  88 03 00 00 53 41 56 45 5F 50 49 43 4B 55 50 53
+{13403}  5F 5A 00 9A
+end
+{13407} shake_cam 
+hex
+{13410}  "SAVE_POINTS_ANGLE" 00 E2 03 00 00 53 41 56 45 5F 50 4F 49 4E 54 53 5F
+{13444}  58 00 AC 03 00 00 53 41 56 45 5F 50 4F 49 4E 54
+{13460}  53 5F 59 00 BE 03 00 00 53 41 56 45 5F 50 4F 49
+{13476}  4E 54 53 5F 5A 00
+end
+{13482}   has_mission_audio_loaded 
+hex
+{13485}  00 53 43 52 49 50 54 5F 53 54 41 54 55 53 00 C9
+end
+{13501} goto 
+hex
+{13504}  "SECOND_PLAYER" 00
+end
+{13518} delete_char 
+hex
+{13521}  00 53 45 43 4F 4E 44 5F 50 4C 41 59 45 52 5F 41
+{13537}  43 54 4F 52 00 9C 00 00 00 53 45 4C 45 43 54 45
+{13553}  44 5F 4D 45 4E 55 5F 49 54 45 4D 00
+end
+{13565}   is_int_lvar_greater_or_equal_to_int_lvar 
+hex
+{13568}  00 53 45 4C 4C 45 52 5F 4D 4F 44 45 4C 00
+end
+{13582}   is_car_street_racer 
+hex
+{13585}  00 53 46 47 59 4D 5F 49 43 4F 4E 00
+end
+{13597} switch_object_brains 
+hex
+{13600}  00 53 48 4F 4F 54 49 4E 47 5F 41 56 41 49 4C 41
+{13616}  42 4C 45 00
+end
+{13620} 001A:    // Note: the incorrect math opcode was used here
+hex
+{13623}  00 53 48 4F 4F 54 49 4E 47 5F 49 4E 44 45 58 00
+end
+{13639} set_relationship 
+hex
+{13642}  00 53 48 4F 4F 54 49 4E 47 5F 49 4E 44 45 58 5F
+{13658}  32 00 48 07 00 00 53 48 4F 4F 54 49 4E 47 5F 58
+{13674}  00 39
+end
+{13676} 0007:  // Note: the incorrect math opcode was used here
+hex
+{13679}  "SHOOTING_Y" 00 3D 07 00 00 53 48 4F 4F 54 49 4E 47 5F 5A 00 41
+end
+{13706} 0007:  // Note: the incorrect math opcode was used here
+hex
+{13709}  "SHOPPINGITEM_BODYPART" 00
+end
+{13731} set_train_forced_to_slow_down 
+hex
+{13734}  00 53 48 4F 50 50 49 4E 47 49 54 45 4D 5F 4D 4F
+{13750}  44 45 4C 43 52 43 00 CE
+end
+{13758} 0009:  // Note: the incorrect math opcode was used here
+hex
+{13761}  "SHOPS_PLAYER_CASH" 00 C2 0A 00 00 53 48 4F 57 5F 53 48 4F 50 5F 53 50
+{13795}  48 45 52 45 00 80 00 00 00 53 48 54 52 5F 43 48
+{13811}  41 52 41 43 54 45 52 53 00 69
+end
+{13821} 0017:  // Note: the incorrect math opcode was used here
+hex
+{13824}  "SMOKE_CAR" 00
+end
+{13834} set_lvar_float_to_lvar_float 
+hex
+{13837}  00 53 4D 4F 4B 45 5F 54 4F 54 41 4C 5F 50 41 53
+{13853}  53 45 44 5F 4D 49 53 53 49 4F 4E 53 00 C6
+end
+{13867} wait 
+hex
+{13870}  "SPECIAL_AXIS_X" 00
+end
+{13885} 0013:  // Note: the incorrect math opcode was used here
+hex
+{13888}  00 53 50 45 43 49 41 4C 5F 41 58 49 53 5F 59 00
+end
+{13904} 0014:  // Note: the incorrect math opcode was used here
+hex
+{13907}  00 53 54 41 54 5F 43 59 43 4C 49 4E 47 5F 53 4B
+{13923}  49 4C 4C 00
+end
+{13927} add_timed_float_lvar_to_float_lvar 
+hex
+{13930}  00 53 54 41 54 5F 44 52 49 56 49 4E 47 5F 53 4B
+{13946}  49 4C 4C 00
+end
+{13950} remove_script_fire 
+hex
+{13953}  00 53 54 41 54 5F 46 41 54 00
+end
+{13963} task_leave_car 
+hex
+{13966}  00 53 54 41 54 5F 47 41 4D 42 4C 49 4E 47 5F 53
+{13982}  4B 49 4C 4C 00 70
+end
+{13988} 0021:    // Note: the incorrect math opcode was used here
+hex
+{13991}  "STAT_LUNG_CAPACITY" 00
+end
+{14010} 0021:    // Note: the incorrect math opcode was used here
+hex
+{14013}  00 53 54 41 54 5F 4C 55 4E 47 5F 43 41 50 41 43
+{14029}  49 54 59 5F 46 4F 52 5F 57 55 5A 49 00 5F
+end
+{14043}   is_int_var_greater_than_int_var 
+hex
+{14046}  "STAT_PERCENTAGE_COMPLETED" 00 2F 03 00 00 53 54 41 54 5F 50 52 4F 47 52 45 53
+{14088}  53 5F 57 49 54 48 5F 4D 49 4C 4C 49 45 00 8B 05
+{14104}  00 00 53 54 41 54 5F 53 54 41 4D 49 4E 41 00 BB
+{14120}  00 00 00 53 54 41 54 5F 54 41 47 53 5F 53 50 52
+{14136}  41 59 45 44 00 21
+end
+{14142} shake_cam 
+hex
+{14145}  "STAT_TAKEN_PHOTOS" 00 20 03 00 00 53 54 41 54 5F 55 4E 4C 4F 43 4B 45
+{14179}  44 5F 43 49 54 49 45 53 5F 4E 55 4D 42 45 52 00
+end
+{14195} 0019:    // Note: the incorrect math opcode was used here
+hex
+{14198}  00 53 54 45 41 4C 5F 54 4F 54 41 4C 5F 50 41 53
+{14214}  53 45 44 5F 4D 49 53 53 49 4F 4E 53 00 20
+end
+{14228} goto 
+hex
+{14231}  "STUNT_MISSIONS_BESTTIME" 00 ED 0A 00 00 53 54 55 4E 54 5F 4D 49 53 53 49 4F
+{14271}  4E 5F 54 59 50 45 00 D6
+end
+{14279} goto 
+hex
+{14282}  "SWEET_CAR" 00
+end
+{14292} set_var_float_to_lvar_float 
+hex
+{14295}  00 53 57 45 45 54 5F 54 4F 54 41 4C 5F 50 41 53
+{14311}  53 45 44 5F 4D 49 53 53 49 4F 4E 53 00 C4
+end
+{14325} wait 
+hex
+{14328}  "SYN2_TIME_UNTIL_BACKUP" 00 84 1C 00 00 53 59 4E 44 49 43 41 54 45 5F 54 4F
+{14367}  54 41 4C 5F 50 41 53 53 45 44 5F 4D 49 53 53 49
+{14383}  4F 4E 53 00
+end
+{14387} apply_brakes_to_players_car 
+hex
+{14390}  00 54 41 47 53 5F 50 41 49 4E 54 45 44 5F 50 45
+{14406}  52 43 45 4E 54 41 47 45 00 1B 00 00 00 54 41 54
+{14422}  4F 4F 5F 53 45 4C 45 43 54 45 44 5F 54 4F 52 53
+{14438}  4F 5F 50 41 52 54 00 EE
+end
+{14446}   is_float_lvar_greater_than_float_lvar 
+hex
+{14449}  "TEMPVAR_ACTOR_CAR" 00
+end
+{14467} 0030:    // Note: the incorrect math opcode was used here
+hex
+{14470}  00 54 45 4D 50 56 41 52 5F 41 4E 47 4C 45 00 48
+{14486}  00 00 00 54 45 4D 50 56 41 52 5F 43 41 4C 4C 5F
+{14502}  54 49 4D 45 00 B9 00 00 00 54 45 4D 50 56 41 52
+{14518}  5F 43 41 52 5F 54 59 50 45 00
+end
+{14528} 0031:    // Note: the incorrect math opcode was used here
+hex
+{14531}  00 54 45 4D 50 56 41 52 5F 46 4C 4F 41 54 5F 31
+{14547}  00 49 00 00 00 54 45 4D 50 56 41 52 5F 46 4C 4F
+{14563}  41 54 5F 32 00 4A 00 00 00 54 45 4D 50 56 41 52
+{14579}  5F 46 4C 4F 41 54 5F 33 00 4B 00 00 00 54 45 4D
+{14595}  50 56 41 52 5F 58 5F 43 4F 4F 52 44 00 45 00 00
+{14611}  00 54 45 4D 50 56 41 52 5F 59 5F 43 4F 4F 52 44
+{14627}  00 46 00 00 00 54 45 4D 50 56 41 52 5F 5A 5F 43
+{14643}  4F 4F 52 44 00 47 00 00 00 54 49 4D 45 5F 46 52
+{14659}  4F 4D 5F 4C 41 53 54 5F 43 41 4C 4C 00 BA 00 00
+{14675}  00 54 49 4D 45 5F 46 52 4F 4D 5F 4C 41 53 54 5F
+{14691}  43 41 4C 4C 5F 47 4F 54 5F 46 4C 41 47 00
+end
+{14705}   is_float_lvar_greater_than_float_var 
+hex
+{14708}  00 54 49 4D 45 5F 48 4F 55 52 53 00
+end
+{14720} 0022:    // Note: the incorrect math opcode was used here
+hex
+{14723}  00 54 49 4D 45 5F 4D 49 4E 53 00 23 00 00 00 54
+{14739}  4F 52 45 4E 4F 5F 54 4F 54 41 4C 5F 50 41 53 53
+{14755}  45 44 5F 4D 49 53 53 49 4F 4E 53 00 51 02 00 00
+{14771}  54 4F 54 41 4C 5F 41 56 41 49 4C 41 42 4C 45 5F
+{14787}  53 41 56 45 5F 50 49 43 4B 55 50 53 00 75
+end
+{14801} shake_cam 
+hex
+{14804}  "TOTAL_FOOD_EATEN" 00 A2 02 00 00 54 4F 54 41 4C 5F 50 41 53 53 45 4E
+{14837}  47 45 52 53 5F 44 52 4F 50 50 45 44 4F 46 46 00
+{14853}  B4 00 00 00 54 52 41 49 4E 53 5F 54 45 58 54 5F
+{14869}  53 48 4F 57 4E 00 33 25 00 00 54 52 41 49 4E 53
+{14885}  5F 54 52 41 49 4E 5F 48 41 4E 44 4C 45 00 34 25
+{14901}  00 00 54 52 41 49 4E 53 5F 54 52 41 49 4E 5F 53
+{14917}  50 45 45 44 00 35
+end
+{14923}   is_float_lvar_greater_than_float_lvar 
+hex
+{14926}  "TRUCKING_TOTAL_PASSED_MISSIONS" 00 DF 1F 00 00 54 52 55 54 48 5F 54 4F 54 41 4C 5F
+{14973}  50 41 53 53 45 44 5F 4D 49 53 53 49 4F 4E 53 00
+end
+{14989} set_car_density_multiplier 
+hex
+{14992}  00 55 4E 4C 4F 43 4B 45 44 5F 49 4D 50 4F 52 54
+{15008}  5F 43 41 52 53 00 34 04 00 00 56 41 4C 45 54 5F
+{15024}  43 41 52 00 FF 29 00 00 56 41 4C 45 54 5F 43 41
+{15040}  52 5F 44 52 49 56 45 52 00 FA
+end
+{15050} 0029:    // Note: the incorrect math opcode was used here
+hex
+{15053}  "VALET_PARKED_CARS_NUMBER" 00 38 07 00 00 56 41 4C 45 54 5F 53 54 41 47 45 00
+{15094}  BD 2A 00 00 56 41 4C 45 54 5F 55 4E 49 46 4F 52
+{15110}  4D 5F 41 56 41 49 4C 41 42 4C 45 00
+end
+{15122}   is_object_intersecting_world 
+hex
+{15125}  00 56 49 44 45 4F 5F 47 41 4D 45 00 C4 02 00 00
+{15141}  57 41 4E 54 45 44 43 52 4F 53 53 4F 46 46 5F 4F
+{15157}  42 4A 45 43 54 53 00 60
+end
+{15165} 0004:  // Note: the incorrect math opcode was used here
+hex
+{15168}  "WANTED_LIST_OBJECT" 00 7B 04 00 00 57 45 45 4B 44 41 59 00
+end
+{15199} 0028:    // Note: the incorrect math opcode was used here
+hex
+{15202}  00 57 55 5A 49 4D 55 5F 54 4F 54 41 4C 5F 50 41
+{15218}  53 53 45 44 5F 4D 49 53 53 49 4F 4E 53 00 1F 02
+{15234}  00 00 58 5F 41 47 41 49 4E 53 54 5F 41 4C 4C 5F
+{15250}  4F 44 44 53 00 FE
+end
+{15256} wait 
+hex
+{15259}  "X_ANGEL_PINE" 00 EE 01 00 00 58 5F 41 4E 47 45 4C 5F 50 49 4E 45
+{15288}  5F 4D 4F 54 45 4C 00 F4
+end
+{15296} wait 
+hex
+{15299}  "X_BCE2_CHECKPOINTS" 00 59 0F 00 00 58 5F 42 43 45 32 5F 50 41 54 52 49
+{15334}  4F 54 5F 43 48 45 43 4B 50 4F 49 4E 54 53 00 58
+end
+{15350} 0010:  // Note: the incorrect math opcode was used here
+hex
+{15353}  "X_BIG_SMOKE_HOUSE" 00 D4 01 00 00 58 5F 42 55 59 5F 4D 41 52 4B 45 52
+{15387}  00 A6
+end
+{15389} goto 
+hex
+{15392}  "X_CALIGULA_PALACE" 00 6B 02 00 00 58 5F 43 41 4D 45 52 41 00 AE
+end
+{15424} goto 
+hex
+{15427}  "X_CATALINA_HOUSE" 00
+end
+{15444} read_kill_frenzy_status 
+hex
+{15447}  00 58 5F 43 45 53 41 52 5F 48 4F 55 53 45 00 E0
+end
+{15463} wait 
+hex
+{15466}  "X_CRASH_LS" 00 DD 01 00 00 58 5F 44 52 49 56 49 4E 47 5F 53 43
+{15493}  48 4F 4F 4C 00 41
+end
+{15499} goto 
+hex
+{15502}  "X_JIZZY_CLUB" 00 2F 02 00 00 58 5F 4A 4F 48 4E 53 4F 4E 5F 48 4F
+{15531}  55 53 45 00 CB 01 00 00 58 5F 4C 4F 43 41 4C 5F
+{15547}  4C 49 51 55 4F 52 5F 53 54 4F 52 45 00 FB
+end
+{15561} wait 
+hex
+{15564}  "X_MADD_DOGG_CRIB" 00 79 02 00 00 58 5F 4D 45 45 54 49 4E 47 5F 43 41
+{15597}  54 41 4C 49 4E 41 00 FF
+end
+{15605} wait 
+hex
+{15608}  "X_MONTGOMERY" 00
+end
+{15621} set_police_ignore_player 
+hex
+{15624}  00 58 5F 4F 47 5F 4C 4F 43 5F 48 4F 55 53 45 00
+{15640}  DA 01 00 00 58 5F 4F 47 5F 4C 4F 43 5F 57 4F 52
+{15656}  4B 00 D7 01 00 00 58 5F 4F 4C 44 5F 41 49 52 50
+{15672}  4F 52 54 00 5C 02 00 00 58 5F 50 45 52 53 48 49
+{15688}  4E 47 5F 53 51 55 41 52 45 5F 4C 53 00 A6
+end
+{15702} wait 
+hex
+{15705}  "X_PRICKLE_PINE_LV" 00 65 02 00 00 58 5F 50 52 4F 50 45 52 54 59 5F 54
+{15739}  4F 5F 42 55 59 00
+end
+{15745} set_car_escort_car_front 
+hex
+{15748}  00 58 5F 52 41 43 45 5F 54 4F 55 52 4E 41 4D 45
+{15764}  4E 54 5F 50 4F 49 4E 54 00 32
+end
+{15774} goto 
+hex
+{15777}  "X_ROYAL_CASINO" 00 68 02 00 00 58 5F 52 59 44 45 52 5F 48 4F 55 53
+{15808}  45 00 D1 01 00 00 58 5F 53 46 5F 47 41 52 41 47
+{15824}  45 00
+end
+{15826} set_char_health 
+hex
+{15829}  00 58 5F 53 46 5F 47 41 52 41 47 45 5F 32 00 2C
+end
+{15845} goto 
+hex
+{15848}  "X_SF_GARAGE_3" 00 3E 02 00 00 58 5F 53 4D 41 4C 4C 5F 54 4F 57 4E
+{15878}  5F 42 41 4E 4B 00 FC 01 00 00 58 5F 53 54 41 52
+{15894}  54 5F 41 4E 49 4D 5F 46 4F 4F 44 00
+end
+{15906} set_char_only_damaged_by_player 
+hex
+{15909}  00 58 5F 53 54 55 4E 54 5F 4D 49 53 53 49 4F 4E
+{15925}  5F 42 4D 58 00 F0
+end
+{15931} 000A:  // Note: the incorrect math opcode was used here
+hex
+{15934}  "X_STUNT_MISSION_NRG500" 00 F4 0A 00 00 58 5F 53 57 45 45 54 5F 48 4F 55 53
+{15973}  45 00 CE 01 00 00 58 5F 54 41 4E 4B 45 52 5F 43
+{15989}  4F 4D 4D 41 4E 44 45 52 00 FD
+end
+{15999} wait 
+hex
+{16002}  "X_THE_FOUR_DRAGONS_CASINO" 00 5F 02 00 00 58 5F 54 48 45 5F 46 4F 55 52 5F 44
+{16044}  52 41 47 4F 4E 53 5F 43 41 53 49 4E 4F 5F 32 00
+{16060}  62 02 00 00 58 5F 54 49 45 52 52 41 5F 52 4F 42
+{16076}  41 44 41 5F 52 41 4E 43 48 00 59 02 00 00 58 5F
+{16092}  54 52 55 54 48 5F 46 41 52 4D 00 F1
+end
+{16104} wait 
+hex
+{16107}  "X_WOOZIE_HOUSE" 00
+end
+{16122} change_car_colour 
+hex
+{16125}  00 58 5F 5A 45 52 4F 5F 52 43 5F 53 48 4F 50 00
+end
+{16141} get_char_health 
+hex
+{16144}  00 59 5F 41 47 41 49 4E 53 54 5F 41 4C 4C 5F 4F
+{16160}  44 44
+end
+{16162} create_player 
+hex
+{16167}  00 59 5F 41 4E 47 45 4C 5F 50 49 4E 45 00 EF 01
+{16183}  00 00 59 5F 41 4E 47 45 4C 5F 50 49 4E 45 5F 4D
+{16199}  4F 54 45 4C 00 F5
+end
+{16205} wait 
+hex
+{16208}  "Y_BCE2_CHECKPOINTS" 00 AE 0F 00 00 59 5F 42 43 45 32 5F 50 41 54 52 49
+{16243}  4F 54 5F 43 48 45 43 4B 50 4F 49 4E 54 53 00 CC
+end
+{16259} 0010:  // Note: the incorrect math opcode was used here
+hex
+{16262}  "Y_BIG_SMOKE_HOUSE" 00 D5 01 00 00 59 5F 42 55 59 5F 4D 41 52 4B 45 52
+{16296}  00 A7
+end
+{16298} goto 
+hex
+{16301}  "Y_CALIGULA_PALACE" 00 6C 02 00 00 59 5F 43 41 4D 45 52 41 00 AF
+end
+{16333} goto 
+hex
+{16336}  "Y_CATALINA_HOUSE" 00 00 02 00 00 59 5F 43 45 53 41 52 5F 48 4F 55 53
+{16369}  45 00 E1 01 00 00 59 5F 43 52 41 53 48 5F 4C 53
+{16385}  00 DE
+end
+{16387} wait 
+hex
+{16390}  "Y_DRIVING_SCHOOL" 00
+end
+{16407} arm_car_with_bomb 
+hex
+{16410}  00 59 5F 4A 49 5A 5A 59 5F 43 4C 55 42 00 30 02
+{16426}  00 00 59 5F 4A 4F 48 4E 53 4F 4E 5F 48 4F 55 53
+{16442}  45 00 CC 01 00 00 59 5F 4C 4F 43 41 4C 5F 4C 49
+{16458}  51 55 4F 52 5F 53 54 4F 52 45 00 01 02 00 00 59
+{16474}  5F 4D 41 44 44 5F 44 4F 47 47 5F 43 52 49 42 00
+{16490}  7A
+end
+{16491} goto 
+hex
+{16494}  "Y_MEETING_CATALINA" 00
+end
+{16513}   locate_char_any_means_car_3d 
+hex
+{16516}  00 59 5F 4D 4F 4E 54 47 4F 4D 45 52 59 00 F8 01
+{16532}  00 00 59 5F 4F 47 5F 4C 4F 43 5F 48 4F 55 53 45
+{16548}  00 DB
+end
+{16550} wait 
+hex
+{16553}  "Y_OG_LOC_WORK" 00 D8 01 00 00 59 5F 4F 4C 44 5F 41 49 52 50 4F 52
+{16583}  54 00 5D 02 00 00 59 5F 50 45 52 53 48 49 4E 47
+{16599}  5F 53 51 55 41 52 45 5F 4C 53 00 A7
+end
+{16611} wait 
+hex
+{16614}  "Y_PRICKLE_PINE_LV" 00 66 02 00 00 59 5F 50 52 4F 50 45 52 54 59 5F 54
+{16648}  4F 5F 42 55 59 00
+end
+{16654} set_char_anim_current_time 
+hex
+{16657}  00 59 5F 52 41 43 45 5F 54 4F 55 52 4E 41 4D 45
+{16673}  4E 54 5F 50 4F 49 4E 54 00 36
+end
+{16683} goto 
+hex
+{16686}  "Y_ROYAL_CASINO" 00 69 02 00 00 59 5F 52 59 44 45 52 5F 48 4F 55 53
+{16717}  45 00 D2 01 00 00 59 5F 53 46 5F 47 41 52 41 47
+{16733}  45 00
+end
+{16735} set_car_health 
+hex
+{16738}  00 59 5F 53 46 5F 47 41 52 41 47 45 5F 32 00 2D
+end
+{16754} goto 
+hex
+{16757}  "Y_SF_GARAGE_3" 00 3F 02 00 00 59 5F 53 4D 41 4C 4C 5F 54 4F 57 4E
+{16787}  5F 42 41 4E 4B 00
+end
+{16793}   locate_char_any_means_car_2d 
+hex
+{16796}  00 59 5F 53 54 41 52 54 5F 41 4E 49 4D 5F 46 4F
+{16812}  4F 44 00 AA
+end
+{16816} goto 
+hex
+{16819}  "Y_STUNT_MISSION_BMX" 00 F1 0A 00 00 59 5F 53 54 55 4E 54 5F 4D 49 53 53
+{16855}  49 4F 4E 5F 4E 52 47 35 30 30 00 F5
+end
+{16867} 000A:  // Note: the incorrect math opcode was used here
+hex
+{16870}  "Y_SWEET_HOUSE" 00 CF 01 00 00 59 5F 54 41 4E 4B 45 52 5F 43 4F 4D
+{16900}  4D 41 4E 44 45 52 00 03
+end
+{16908} goto 
+hex
+{16911}  "Y_THE_FOUR_DRAGONS_CASINO" 00 60 02 00 00 59 5F 54 48 45 5F 46 4F 55 52 5F 44
+{16953}  52 41 47 4F 4E 53 5F 43 41 53 49 4E 4F 5F 32 00
+{16969}  63 02 00 00 59 5F 54 49 45 52 52 41 5F 52 4F 42
+{16985}  41 44 41 5F 52 41 4E 43 48 00 5A 02 00 00 59 5F
+{17001}  54 52 55 54 48 5F 46 41 52 4D 00 F2
+end
+{17013} wait 
+hex
+{17016}  "Y_WOOZIE_HOUSE" 00
+end
+{17031} switch_ped_roads_on 
+hex
+{17034}  00 59 5F 5A 45 52 4F 5F 52 43 5F 53 48 4F 50 00
+end
+{17050} get_car_health 
+hex
+{17053}  00 5A 45 52 4F 34 5F 43 41 52 5F 48 45 41 4C 54
+{17069}  48 00 09 1D 00 00 5A 45 52 4F 34 5F 54 49 4D 45
+{17085}  00 08
+end
+{17087}   is_int_lvar_greater_than_int_lvar 
+hex
+{17090}  "ZERO_RCSHOP_BOUGHT" 00
+end
+{17109} set_object_render_scorched 
+hex
+{17112}  00 5A 45 52 4F 5F 54 4F 54 41 4C 5F 50 41 53 53
+{17128}  45 44 5F 4D 49 53 53 49 4F 4E 53 00 1E 02 00 00
+{17144}  5A 5F 41 47 41 49 4E 53 54 5F 41 4C 4C 5F 4F 44
+{17160}  44 53 00 0A
+end
+{17164} goto 
+hex
+{17167}  "Z_ANGEL_PINE" 00
+end
+{17180} set_max_wanted_level 
+hex
+{17183}  00 5A 5F 41 4E 47 45 4C 5F 50 49 4E 45 5F 4D 4F
+{17199}  54 45 4C 00 F6 01 00 00 5A 5F 42 43 45 32 5F 43
+{17215}  48 45 43 4B 50 4F 49 4E 54 53 00 03
+end
+{17227} 0010:  // Note: the incorrect math opcode was used here
+hex
+{17230}  "Z_BCE2_PATRIOT_CHECKPOINTS" 00 40 11 00 00 5A 5F 42 49 47 5F 53 4D 4F 4B 45 5F
+{17273}  48 4F 55 53 45 00 D6 01 00 00 5A 5F 42 55 59 5F
+{17289}  4D 41 52 4B 45 52 00 A8
+end
+{17297} goto 
+hex
+{17300}  "Z_CALIGULA_PALACE" 00 6D 02 00 00 5A 5F 43 41 4D 45 52 41 00 B0
+end
+{17332} goto 
+hex
+{17335}  "Z_CATALINA_HOUSE" 00
+end
+{17352}   locate_char_on_foot_car_3d 
+hex
+{17355}  00 5A 5F 43 45 53 41 52 5F 48 4F 55 53 45 00 E2
+end
+{17371} wait 
+hex
+{17374}  "Z_CRASH_LS" 00 DF 01 00 00 5A 5F 44 52 49 56 49 4E 47 5F 53 43
+{17401}  48 4F 4F 4C 00 43
+end
+{17407} goto 
+hex
+{17410}  "Z_JIZZY_CLUB" 00 31 02 00 00 5A 5F 4A 4F 48 4E 53 4F 4E 5F 48 4F
+{17439}  55 53 45 00 CD 01 00 00 5A 5F 4C 4F 43 41 4C 5F
+{17455}  4C 49 51 55 4F 52 5F 53 54 4F 52 45 00 07
+end
+{17469} goto 
+hex
+{17472}  "Z_MADD_DOGG_CRIB" 00 7B 02 00 00 5A 5F 4D 45 45 54 49 4E 47 5F 43 41
+{17505}  54 41 4C 49 4E 41 00 0B
+end
+{17513} goto 
+hex
+{17516}  "Z_MONTGOMERY" 00
+end
+{17529} start_kill_frenzy 
+hex
+{17532}  00 5A 5F 4F 47 5F 4C 4F 43 5F 48 4F 55 53 45 00
+{17548}  DC 01 00 00 5A 5F 4F 47 5F 4C 4F 43 5F 57 4F 52
+{17564}  4B 00 D9 01 00 00 5A 5F 4F 4C 44 5F 41 49 52 50
+{17580}  4F 52 54 00 5E 02 00 00 5A 5F 50 45 52 53 48 49
+{17596}  4E 47 5F 53 51 55 41 52 45 5F 4C 53 00 A8
+end
+{17610} wait 
+hex
+{17613}  "Z_PRICKLE_PINE_LV" 00 67 02 00 00 5A 5F 50 52 4F 50 45 52 54 59 5F 54
+{17647}  4F 5F 42 55 59 00
+end
+{17653} task_kill_char_on_foot_while_ducking 
+hex
+{17656}  00 5A 5F 52 41 43 45 5F 54 4F 55 52 4E 41 4D 45
+{17672}  4E 54 5F 50 4F 49 4E 54 00 3A
+end
+{17682} goto 
+hex
+{17685}  "Z_ROYAL_CASINO" 00 6A 02 00 00 5A 5F 52 59 44 45 52 5F 48 4F 55 53
+{17716}  45 00 D3 01 00 00 5A 5F 53 46 5F 47 41 52 41 47
+{17732}  45 00 25 02 00 00 5A 5F 53 46 5F 47 41 52 41 47
+{17748}  45 5F 32 00 2E 02 00 00 5A 5F 53 46 5F 47 41 52
+{17764}  41 47 45 5F 33 00 40 02 00 00 5A 5F 53 4D 41 4C
+{17780}  4C 5F 54 4F 57 4E 5F 42 41 4E 4B 00
+end
+{17792} generate_random_float_in_range 
+hex
+{17795}  00 5A 5F 53 54 41 52 54 5F 41 4E 49 4D 5F 46 4F
+{17811}  4F 44 00 AB
+end
+{17815} goto 
+hex
+{17818}  "Z_STUNT_MISSION_BMX" 00 F2 0A 00 00 5A 5F 53 54 55 4E 54 5F 4D 49 53 53
+{17854}  49 4F 4E 5F 4E 52 47 35 30 30 00 F6
+end
+{17866} 000A:  // Note: the incorrect math opcode was used here
+hex
+{17869}  "Z_SWEET_HOUSE" 00 D0 01 00 00 5A 5F 54 41 4E 4B 45 52 5F 43 4F 4D
+{17899}  4D 41 4E 44 45 52
+end
+{17905} clear_object_last_weapon_damage &0
+hex
+{17910}  "Z_THE_FOUR_DRAGONS_CASINO" 00 61 02 00 00 5A 5F 54 48 45 5F 46 4F 55 52 5F 44
+{17952}  52 41 47 4F 4E 53 5F 43 41 53 49 4E 4F 5F 32 00
+{17968}  64 02 00 00 5A 5F 54 49 45 52 52 41 5F 52 4F 42
+{17984}  41 44 41 5F 52 41 4E 43 48 00 5B 02 00 00 5A 5F
+{18000}  54 52 55 54 48 5F 46 41 52 4D 00 F3
+end
+{18012} wait 
+hex
+{18015}  "Z_WOOZIE_HOUSE" 00
+end
+{18030} switch_ped_roads_off 
+hex
+{18033}  00 5A 5F 5A 45 52 4F 5F 52 43 5F 53 48 4F 50 00
+{18049}  28 02 00 00 5F 31 30 30 5F 50 45 52 43 45 4E 54
+{18065}  5F 43 4F 4D 50 4C 45 54 45 00 22 03 00 00 25 02
+{18081}  00 00 5F 5F 53 42 46 54
+end
+{18089} line 
